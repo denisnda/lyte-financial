@@ -1,54 +1,61 @@
 import { Card } from "@/components/ui/card";
+import { Target, Lightbulb, TrendingUp } from "lucide-react";
 
-const highlights = [
+const sections = [
   {
-    title: "Commercial Lending isn't difficult",
-    description: "Did you know lenders can be more generous with commercial lending than residential offering up to 90-100% of the purchase price for new commercial property purchases?"
+    icon: Target,
+    title: "The Client's Goal",
+    content: "We were approached by a highly successful, established business that was rapidly outgrowing its current setup. The company was operating across two separate leased premises, which was inefficient and costly.\n\nTheir goal was to consolidate operations into a single, new, owner-occupied commercial property. However, they were concerned around the size of the deposit would drain their working capital needed for expansion."
   },
   {
-    title: "All you need is a Plan",
-    description: "This is where the team at Lyte review your entire position to provide you with the most creative strategies in the market."
+    icon: Lightbulb,
+    title: "Our Strategic Solution",
+    content: "The client identified their ideal property, valued at $8.2 million.\n\nRecognising the outstanding financial strength of the applicant, their strong personal income, and the company's consistent profitability, we devised a solution beyond the standard 70% or 80% loan.\n\nWe negotiated and structured a 100% finance facility for the entire $8.2 million purchase price.\n\nThis was secured not against residential property, but against the business itself, using General Security Agreements (GSAs) over the trading entity. This structure was acceptable to the lender because we demonstrated the clear financial strength and serviceability of the client's business."
   },
   {
-    title: "to have Every Option at Your Fingertips",
-    description: "Lyte utilises every lender from the 'Big 4' down to family offices to ensure you have all options at your fingertips."
+    icon: TrendingUp,
+    title: "The Tangible Outcome for Our Client",
+    content: "By securing 100% of the purchase price, we delivered a powerful strategic advantage:\n\n• Zero Cash Deposit: The client preserved 100% of their cash reserves. They did not have to tie up millions of dollars in a deposit.\n\n• Capital for Growth: This preserved cash was immediately allocated to facilitating their business expansion, including purchasing new equipment and boosting operational cash flow.\n\n• A Platform for the Future: Instead of just \"buying a building,\" our solution enabled the client to take a major leap forward, securing their long-term premises and funding their growth, all in one move.\n\nThis is a prime example of how we partner with clients to find solutions that match their ambition."
   }
 ];
 
 export default function FlowChartSection() {
   return (
-    <section id="flow-chart" className="py-16 md:py-24 bg-accent">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
-          <h2 
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
-            data-testid="text-flowchart-title"
-          >
-            Bespoke Lending Strategies for your new commercial acquisition
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {highlights.map((highlight, index) => (
-            <Card 
-              key={index}
-              className="p-8 hover-elevate"
-              data-testid={`card-highlight-${index + 1}`}
-            >
-              <h3 
-                className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4"
-                data-testid={`text-highlight-title-${index + 1}`}
+    <section id="flow-chart" className="py-16 md:py-24 bg-background">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="space-y-8">
+          {sections.map((section, index) => {
+            const Icon = section.icon;
+            return (
+              <Card 
+                key={index}
+                className="p-8 md:p-10"
+                data-testid={`card-section-${index + 1}`}
               >
-                {highlight.title}
-              </h3>
-              <p 
-                className="text-muted-foreground text-base md:text-lg leading-relaxed"
-                data-testid={`text-highlight-description-${index + 1}`}
-              >
-                {highlight.description}
-              </p>
-            </Card>
-          ))}
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h2 
+                      className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4"
+                      data-testid={`text-section-title-${index + 1}`}
+                    >
+                      {section.title}
+                    </h2>
+                    <div 
+                      className="text-muted-foreground text-base md:text-lg leading-relaxed whitespace-pre-line"
+                      data-testid={`text-section-content-${index + 1}`}
+                    >
+                      {section.content}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -24,22 +24,19 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
       
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/50" />
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-white">
         <h1 
-          className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight"
+          className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           data-testid="text-hero-title"
         >
-          Whether you are seeking a new owner occupied premises or want to expand into commercial investment properties, Lyte has every option at their disposal.
+          Case Study: Fuelling Growth with a 100% Financed $8.2M Premises
         </h1>
-        
-        <Button 
-          size="lg"
-          onClick={handleStartJourney}
-          className="bg-primary-foreground text-primary hover-elevate active-elevate-2 font-medium text-base px-8"
-          data-testid="button-start-journey"
+        <p 
+          className="text-lg md:text-xl leading-relaxed max-w-4xl"
+          data-testid="text-hero-subtitle"
         >
-          Start Your Funding Journey
-        </Button>
+          We believe smart financing is about more than just securing a loan; it's about creating a platform for your business to grow. This case study demonstrates how we helped a client preserve vital capital while securing their ideal commercial property.
+        </p>
       </div>
     </section>
   );
