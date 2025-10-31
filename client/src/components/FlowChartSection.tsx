@@ -48,28 +48,58 @@ export default function FlowChartSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative">
-          {stages.map((stage, index) => (
-            <div key={stage.number} className="relative">
-              <StageCard
-                stageNumber={stage.number}
-                title={stage.title}
-                description={stage.description}
-              />
-              
-              {index < stages.length - 1 && (
-                <>
-                  <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                    <ArrowRight className="h-8 w-8 text-primary" />
-                  </div>
-                  
-                  <div className="flex lg:hidden justify-center my-4">
-                    <ArrowDown className="h-8 w-8 text-primary" />
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative">
+            {stages.slice(0, 3).map((stage, index) => (
+              <div key={stage.number} className="relative">
+                <StageCard
+                  stageNumber={stage.number}
+                  title={stage.title}
+                  description={stage.description}
+                />
+                
+                {index < 2 && (
+                  <>
+                    <div className="hidden md:flex absolute top-1/2 -right-3 lg:-right-4 transform -translate-y-1/2 z-20">
+                      <ArrowRight className="h-8 w-8 text-primary" />
+                    </div>
+                    
+                    <div className="flex md:hidden justify-center my-4">
+                      <ArrowDown className="h-8 w-8 text-primary" />
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          <div className="flex justify-center">
+            <ArrowDown className="h-8 w-8 text-primary" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto relative">
+            {stages.slice(3, 5).map((stage, index) => (
+              <div key={stage.number} className="relative">
+                <StageCard
+                  stageNumber={stage.number}
+                  title={stage.title}
+                  description={stage.description}
+                />
+                
+                {index === 0 && (
+                  <>
+                    <div className="hidden md:flex absolute top-1/2 -right-3 lg:-right-4 transform -translate-y-1/2 z-20">
+                      <ArrowRight className="h-8 w-8 text-primary" />
+                    </div>
+                    
+                    <div className="flex md:hidden justify-center my-4">
+                      <ArrowDown className="h-8 w-8 text-primary" />
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
