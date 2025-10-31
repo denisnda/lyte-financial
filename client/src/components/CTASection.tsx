@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Building2, Calendar } from "lucide-react";
+import { useLocation } from "wouter";
 
 interface CTASectionProps {
   onBookConsultation?: () => void;
 }
 
 export default function CTASection({ onBookConsultation }: CTASectionProps) {
+  const [, setLocation] = useLocation();
+
   const handleBooking = () => {
-    console.log('Booking consultation');
+    setLocation('/contact');
     onBookConsultation?.();
   };
 
