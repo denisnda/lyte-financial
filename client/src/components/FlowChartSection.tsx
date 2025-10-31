@@ -47,28 +47,15 @@ export default function FlowChartSection() {
           </p>
         </div>
 
-        <div className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {stages.slice(0, 3).map((stage) => (
-              <StageCard
-                key={stage.number}
-                stageNumber={stage.number}
-                title={stage.title}
-                description={stage.description}
-              />
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {stages.slice(3, 5).map((stage) => (
-              <StageCard
-                key={stage.number}
-                stageNumber={stage.number}
-                title={stage.title}
-                description={stage.description}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {stages.map((stage) => (
+            <StageCard
+              key={stage.number}
+              stageNumber={stage.number}
+              title={stage.title}
+              description={stage.description}
+            />
+          ))}
         </div>
       </div>
     </section>
