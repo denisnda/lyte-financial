@@ -29,7 +29,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight"
           data-testid="text-hero-title"
         >
-          From purchasing your first business to acquiring your next, Lyte has the expertise to deliver.
+          Whether you are seeking a new owner occupied premises or want to expand into commercial investment properties, Lyte has every option at their disposal.
         </h1>
         
         <Button 
