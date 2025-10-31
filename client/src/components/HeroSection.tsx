@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
-import heroImage from "@assets/generated_images/Commercial_skyscraper_office_building_fbc635b0.png";
+import heroImage from "@assets/generated_images/Engineering_workshop_manufacturing_facility_c59a6e79.png";
 
 interface HeroSectionProps {
   onCtaClick?: () => void;
