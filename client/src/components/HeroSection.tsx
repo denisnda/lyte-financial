@@ -29,13 +29,13 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
           className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           data-testid="text-hero-title"
         >
-          Case Study: From Senior Manager to Business Owner
+          Case Study: The Smart Structure for Business Partners & SMSF Property
         </h1>
         <p 
           className="text-lg md:text-xl leading-relaxed max-w-4xl"
           data-testid="text-hero-subtitle"
         >
-          Transitioning from a salaried employee to a business owner is one of the biggest financial steps a person can take. This case study shows how we helped a client leverage their experience, not just their assets, to acquire their first business.
+          Using your super to invest in property is a powerful wealth-building strategy, but it can be complex, especially for partners. This case study illustrates how we helped two business partners use their separate super funds to acquire their new business premises together.
         </p>
       </div>
     </section>
