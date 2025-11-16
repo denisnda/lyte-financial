@@ -1,39 +1,56 @@
 import { Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="w-full px-6 md:px-12">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-24">
           <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3">
-            <Building2 className="h-8 w-8" data-testid="logo-icon" />
-            <span className="font-serif text-xl font-semibold" data-testid="text-brand">
+            <Building2 className="h-10 w-10" data-testid="logo-icon" />
+            <span className="font-serif text-2xl font-semibold" data-testid="text-brand">
               LYTE FINANCIAL
             </span>
           </a>
           
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             <a 
-              href="/" 
+              href="#about" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
-              data-testid="link-home"
+              data-testid="link-about"
             >
-              Home
+              About
             </a>
             <a 
-              href="/scenarios" 
+              href="#team" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
-              data-testid="link-scenarios"
+              data-testid="link-team"
             >
-              Scenarios
+              Meet our Team
             </a>
             <a 
-              href="/contact" 
+              href="#advantage" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
-              data-testid="link-contact"
+              data-testid="link-advantage"
             >
-              Contact
+              The Business Advantage
             </a>
+            <a 
+              href="#booking" 
+              className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
+              data-testid="link-booking"
+            >
+              Book a Meeting
+            </a>
+            <Button 
+              asChild
+              className="bg-primary-foreground text-primary hover-elevate active-elevate-2"
+              data-testid="button-contact"
+            >
+              <a href="/contact">
+                Contact
+              </a>
+            </Button>
           </nav>
         </div>
       </div>
