@@ -22,6 +22,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/50" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+          <p 
+            className="text-base md:text-lg font-medium mb-4 tracking-wide opacity-95"
+            data-testid="text-hero-tagline"
+          >
+            Bringing Clarity to Complexity
+          </p>
           <h1 
             className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
             data-testid="text-hero-title"
