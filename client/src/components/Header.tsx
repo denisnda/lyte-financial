@@ -5,30 +5,30 @@ export default function Header() {
     <header className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3">
             <Building2 className="h-8 w-8" data-testid="logo-icon" />
             <span className="font-serif text-xl font-semibold" data-testid="text-brand">
               LYTE FINANCIAL
             </span>
-          </div>
+          </a>
           
           <nav className="hidden md:flex items-center gap-8">
             <a 
-              href="#about" 
+              href="/" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
-              data-testid="link-about"
+              data-testid="link-home"
             >
-              About Us
+              Home
             </a>
             <a 
-              href="#services" 
+              href="/scenarios" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
-              data-testid="link-services"
+              data-testid="link-scenarios"
             >
-              Services
+              Scenarios
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               className="text-sm hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
               data-testid="link-contact"
             >

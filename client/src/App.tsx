@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
+import Scenarios from "@/pages/Scenarios";
+import SMSFScenario from "@/pages/SMSFScenario";
+import CommercialScenario from "@/pages/CommercialScenario";
+import BusinessScenario from "@/pages/BusinessScenario";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +16,10 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/contact" component={Contact} />
+      <Route path="/scenarios" component={Scenarios} />
+      <Route path="/scenarios/smsf" component={SMSFScenario} />
+      <Route path="/scenarios/commercial" component={CommercialScenario} />
+      <Route path="/scenarios/business" component={BusinessScenario} />
       <Route component={NotFound} />
     </Switch>
   );
