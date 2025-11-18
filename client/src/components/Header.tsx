@@ -1,21 +1,18 @@
-import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/image_1763440757674.png";
 
 export default function Header() {
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="w-full px-6 md:px-12">
         <div className="flex items-center justify-between h-24">
-          <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3">
-            <Building2 className="h-10 w-10" data-testid="logo-icon" />
-            <div className="flex flex-col leading-none items-start" data-testid="text-brand">
-              <span className="font-serif text-5xl font-bold tracking-tight">
-                LYTE
-              </span>
-              <span className="font-serif text-[0.5rem] font-normal tracking-[0.45em] -mt-1.5 uppercase">
-                FINANCIAL
-              </span>
-            </div>
+          <a href="/" className="flex items-center hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3">
+            <img 
+              src={logoImage} 
+              alt="Lyte Financial" 
+              className="h-14"
+              data-testid="logo-image"
+            />
           </a>
           
           <nav className="hidden lg:flex items-center gap-10">
