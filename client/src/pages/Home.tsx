@@ -24,7 +24,7 @@ export default function Home() {
         <div className="relative z-10 w-full px-6 md:px-12 pt-16 md:pt-24">
           <div className="max-w-2xl text-primary-foreground">
             <h1 
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-nowrap"
               data-testid="text-hero-title"
             >
               Simplifying the Complex
