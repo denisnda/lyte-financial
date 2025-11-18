@@ -46,14 +46,8 @@ export default function Home() {
               className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
               data-testid="text-services-title"
             >
-              Our Services
+              OUR REAL TIME SOLUTIONS
             </h2>
-            <p 
-              className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto"
-              data-testid="text-services-subtitle"
-            >
-              Comprehensive financial solutions designed for businesses at every stage
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
