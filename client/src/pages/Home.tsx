@@ -30,7 +30,7 @@ export default function Home() {
               Simplifying the Complex
             </h1>
             <p 
-              className="text-lg md:text-xl font-medium tracking-wide"
+              className="text-xl md:text-2xl font-medium tracking-wide"
               data-testid="text-hero-tagline"
             >
               Our advisors illuminate your next best move.
