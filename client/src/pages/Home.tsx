@@ -30,25 +30,11 @@ export default function Home() {
               Simplifying the Complex
             </h1>
             <p 
-              className="text-lg md:text-xl font-medium mb-8 tracking-wide opacity-95"
+              className="text-lg md:text-xl font-medium tracking-wide opacity-95"
               data-testid="text-hero-tagline"
             >
               Our advisors provide bespoke strategies for your individual situation.
             </p>
-            <p 
-              className="text-base md:text-lg leading-relaxed mb-8"
-              data-testid="text-hero-subtitle"
-            >
-              From purchasing your first business to acquiring your next, Lyte Financial has the expertise to deliver tailored lending solutions for your success.
-            </p>
-            <Button 
-              size="lg"
-              onClick={() => setLocation('/contact')}
-              className="bg-primary-foreground text-primary hover-elevate active-elevate-2 font-medium text-base px-8"
-              data-testid="button-get-started"
-            >
-              Get Started
-            </Button>
           </div>
         </div>
       </section>
