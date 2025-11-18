@@ -13,31 +13,31 @@ export default function Header() {
             </span>
           </a>
           
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             <a 
               href="#about" 
-              className="text-base hover-elevate active-elevate-2 px-4 py-2 rounded-md transition-colors font-medium"
+              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
               data-testid="link-about"
             >
               About
             </a>
             <a 
               href="#team" 
-              className="text-base hover-elevate active-elevate-2 px-4 py-2 rounded-md transition-colors font-medium"
+              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
               data-testid="link-team"
             >
               Meet our Team
             </a>
             <a 
               href="#advantage" 
-              className="text-base hover-elevate active-elevate-2 px-4 py-2 rounded-md transition-colors font-medium"
+              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
               data-testid="link-advantage"
             >
               The Business Advantage
             </a>
             <a 
               href="#booking" 
-              className="text-base hover-elevate active-elevate-2 px-4 py-2 rounded-md transition-colors font-medium"
+              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
               data-testid="link-booking"
             >
               Book a Meeting
@@ -45,7 +45,7 @@ export default function Header() {
             <Button 
               asChild
               size="lg"
-              className="bg-primary-foreground text-primary hover-elevate active-elevate-2"
+              className="bg-primary-foreground text-primary hover-elevate active-elevate-2 text-lg px-6"
               data-testid="button-contact"
             >
               <a href="/contact">
