@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] min-h-[500px] flex items-start justify-start overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -21,33 +21,35 @@ export default function Home() {
         
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/50" />
         
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
-          <h1 
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            data-testid="text-hero-title"
-          >
-            Simplifying the Complex
-          </h1>
-          <p 
-            className="text-lg md:text-xl font-medium mb-8 tracking-wide opacity-95 max-w-4xl mx-auto"
-            data-testid="text-hero-tagline"
-          >
-            Our advisors provide bespoke strategies for your individual situation.
-          </p>
-          <p 
-            className="text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8"
-            data-testid="text-hero-subtitle"
-          >
-            From purchasing your first business to acquiring your next, Lyte Financial has the expertise to deliver tailored lending solutions for your success.
-          </p>
-          <Button 
-            size="lg"
-            onClick={() => setLocation('/contact')}
-            className="bg-primary-foreground text-primary hover-elevate active-elevate-2 font-medium text-base px-8"
-            data-testid="button-get-started"
-          >
-            Get Started
-          </Button>
+        <div className="relative z-10 w-full px-6 md:px-12 pt-16 md:pt-24">
+          <div className="max-w-2xl text-white">
+            <h1 
+              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              data-testid="text-hero-title"
+            >
+              Simplifying the Complex
+            </h1>
+            <p 
+              className="text-lg md:text-xl font-medium mb-8 tracking-wide opacity-95"
+              data-testid="text-hero-tagline"
+            >
+              Our advisors provide bespoke strategies for your individual situation.
+            </p>
+            <p 
+              className="text-base md:text-lg leading-relaxed mb-8"
+              data-testid="text-hero-subtitle"
+            >
+              From purchasing your first business to acquiring your next, Lyte Financial has the expertise to deliver tailored lending solutions for your success.
+            </p>
+            <Button 
+              size="lg"
+              onClick={() => setLocation('/contact')}
+              className="bg-primary-foreground text-primary hover-elevate active-elevate-2 font-medium text-base px-8"
+              data-testid="button-get-started"
+            >
+              Get Started
+            </Button>
+          </div>
         </div>
       </section>
 
