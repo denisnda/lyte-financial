@@ -43,7 +43,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 
-              className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+              className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4"
               data-testid="text-services-title"
             >
               OUR REAL TIME CLIENT SOLUTIONS
@@ -61,10 +61,10 @@ export default function Home() {
                   <Building2 className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
                 Business Acquisition
               </h3>
-              <p className="text-muted-foreground text-base leading-relaxed text-center">
+              <p className="text-primary-foreground text-base leading-relaxed text-center">
                 Secure funding to purchase your first business or expand your portfolio with expert guidance.
               </p>
             </Card>
@@ -75,10 +75,10 @@ export default function Home() {
                   <Users className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
                 Commercial Property
               </h3>
-              <p className="text-muted-foreground text-base leading-relaxed text-center">
+              <p className="text-primary-foreground text-base leading-relaxed text-center">
                 Finance owner-occupied premises or investment properties with competitive rates and flexible terms.
               </p>
             </Card>
@@ -89,10 +89,10 @@ export default function Home() {
                   <TrendingUp className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
                 SMSF Property
               </h3>
-              <p className="text-muted-foreground text-base leading-relaxed text-center">
+              <p className="text-primary-foreground text-base leading-relaxed text-center">
                 Navigate complex SMSF structures to leverage your superannuation for property investment.
               </p>
             </Card>
@@ -109,14 +109,14 @@ export default function Home() {
           </div>
           
           <h2 
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6"
             data-testid="text-scenarios-title"
           >
             Real Success Stories
           </h2>
           
           <p 
-            className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+            className="text-primary-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto"
             data-testid="text-scenarios-description"
           >
             Discover how we've helped clients achieve their business and property goals through innovative financing solutions.
@@ -136,14 +136,14 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-accent">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6"
             data-testid="text-cta-title"
           >
             Ready to Start Your Journey?
           </h2>
           
           <p 
-            className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+            className="text-primary-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto"
             data-testid="text-cta-description"
           >
             Let's discuss how we can craft a bespoke financing solution for your business.
