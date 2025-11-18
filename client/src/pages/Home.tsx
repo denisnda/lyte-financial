@@ -52,13 +52,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             <Card 
-              className="p-8 hover-elevate active-elevate-2 cursor-pointer" 
+              className="p-8 bg-primary hover-elevate active-elevate-2 cursor-pointer" 
               onClick={() => setLocation('/business-acquisition')}
               data-testid="card-service-1"
             >
               <div className="flex justify-center mb-6">
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Building2 className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                  <Building2 className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
               <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
@@ -69,10 +69,10 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card className="p-8 hover-elevate" data-testid="card-service-2">
+            <Card className="p-8 bg-primary hover-elevate" data-testid="card-service-2">
               <div className="flex justify-center mb-6">
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
               <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
@@ -83,10 +83,10 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card className="p-8 hover-elevate" data-testid="card-service-3">
+            <Card className="p-8 bg-primary hover-elevate" data-testid="card-service-3">
               <div className="flex justify-center mb-6">
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
               <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
