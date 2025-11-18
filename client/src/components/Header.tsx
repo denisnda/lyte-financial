@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logoImage from "@assets/ChatGPT Image Nov 18, 2025, 03_52_35 PM_1763441578732.png";
+import logoImage from "@assets/image_1763441650198.png";
 
 export default function Header() {
   return (
