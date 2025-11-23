@@ -62,7 +62,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
-                Business Acquisition
+                Business Purchase
               </h3>
               <p className="text-primary-foreground text-base leading-relaxed text-center">
                 Secure funding to purchase your first business or expand your portfolio with expert guidance.
