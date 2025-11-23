@@ -130,7 +130,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="flex justify-center mb-8">
             <div className="bg-primary/10 p-6 rounded-full">
-              <FileText className="h-12 w-12 text-primary" />
+              <FileText className="h-12 w-12 text-primary-foreground" />
             </div>
           </div>
           
