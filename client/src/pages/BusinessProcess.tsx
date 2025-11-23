@@ -33,7 +33,7 @@ const stages = [
   }
 ];
 
-export default function BusinessAcquisition() {
+export default function BusinessProcess() {
   const [, setLocation] = useLocation();
 
   return (

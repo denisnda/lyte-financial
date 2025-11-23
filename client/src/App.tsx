@@ -10,7 +10,8 @@ import Scenarios from "@/pages/Scenarios";
 import SMSFScenario from "@/pages/SMSFScenario";
 import CommercialScenario from "@/pages/CommercialScenario";
 import BusinessScenario from "@/pages/BusinessScenario";
-import BusinessAcquisition from "@/pages/BusinessAcquisition";
+import BusinessPurchase from "@/pages/BusinessPurchase";
+import BusinessProcess from "@/pages/BusinessProcess";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,7 +20,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/contact" component={Contact} />
       <Route path="/team" component={Team} />
-      <Route path="/business-acquisition" component={BusinessAcquisition} />
+      <Route path="/business-purchase" component={BusinessPurchase} />
+      <Route path="/business-process" component={BusinessProcess} />
       <Route path="/scenarios" component={Scenarios} />
       <Route path="/scenarios/smsf" component={SMSFScenario} />
       <Route path="/scenarios/commercial" component={CommercialScenario} />
