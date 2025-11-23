@@ -19,7 +19,7 @@ export default function Header() {
             <img 
               src={wingsImage} 
               alt="Wings" 
-              className="h-[72px] -mt-2"
+              className="h-[72px] -mt-4"
               data-testid="img-wings"
             />
             <img 
