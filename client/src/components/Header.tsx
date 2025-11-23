@@ -10,7 +10,7 @@ export default function Header() {
             <img 
               src={logoImage} 
               alt="Lyte Financial" 
-              className="h-[102px]"
+              className="h-20"
               data-testid="logo-image"
             />
           </a>
