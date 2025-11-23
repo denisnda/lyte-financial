@@ -5,12 +5,12 @@ export default function Header() {
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="w-full px-6 md:px-12">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-32">
           <a href="/" className="flex items-center hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3">
             <img 
               src={logoImage} 
               alt="Lyte Financial" 
-              className="h-24"
+              className="h-32"
               data-testid="logo-image"
             />
           </a>
