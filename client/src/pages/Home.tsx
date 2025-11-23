@@ -18,6 +18,7 @@ import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b1
 import lendingPanel1 from '@assets/LENDING PANEL 1_1763892845984.jpg';
 import lendingPanel2 from '@assets/LENDING PANEL 2_1763892852027.jpg';
 import lendingPanel3 from '@assets/LENDING PANEL 3_1763892857084.jpg';
+import lyteMap from '@assets/LYTE MAP_1763893148700.jpg';
 
 const reviews = [
   {
@@ -274,6 +275,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="w-full" data-testid="section-map">
+        <img
+          src={lyteMap}
+          alt="Lyte Financial Location Map"
+          className="w-full h-auto"
+          data-testid="img-location-map"
+        />
       </section>
 
       <footer className="relative" data-testid="footer">
