@@ -15,6 +15,9 @@ import stGeorgeLogo from '@assets/stock_images/st_george_bank_logo__13ba4291.jpg
 import judoLogo from '@assets/stock_images/judo_bank_logo_austr_67cb11e4.jpg';
 import ampLogo from '@assets/stock_images/amp_bank_logo_austra_5f491124.jpg';
 import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b16.jpg';
+import lendingPanel1 from '@assets/LENDING PANEL 1_1763892845984.jpg';
+import lendingPanel2 from '@assets/LENDING PANEL 2_1763892852027.jpg';
+import lendingPanel3 from '@assets/LENDING PANEL 3_1763892857084.jpg';
 
 const reviews = [
   {
@@ -58,6 +61,12 @@ const banks = [
   { id: 6, name: "AMP", logo: ampLogo },
 ];
 
+const lendingPanels = [
+  { id: 1, image: lendingPanel1 },
+  { id: 2, image: lendingPanel2 },
+  { id: 3, image: lendingPanel3 },
+];
+
 export default function Home() {
   const [, setLocation] = useLocation();
   const [emblaRef] = useEmblaCarousel(
@@ -65,8 +74,8 @@ export default function Home() {
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
   const [emblaBankRef] = useEmblaCarousel(
-    { loop: true, align: 'start' },
-    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+    { loop: true, align: 'center' },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
 
   return (
@@ -242,26 +251,24 @@ export default function Home() {
             >
               Trusted Lending Partners
             </h2>
-            <p className="text-primary text-base">
-              We work with Australia's leading financial institutions
+            <p className="text-primary text-lg font-semibold mb-6">
+              OVER 75+ LENDERS PROVIDING UNIQUE CLIENT SOLUTIONS
             </p>
           </div>
 
-          <div className="overflow-hidden" ref={emblaBankRef}>
-            <div className="flex gap-12 items-center">
-              {banks.map((bank) => (
+          <div className="overflow-hidden max-w-5xl mx-auto" ref={emblaBankRef}>
+            <div className="flex">
+              {lendingPanels.map((panel) => (
                 <div
-                  key={bank.id}
-                  className="flex-[0_0_50%] min-w-0 md:flex-[0_0_33.333%] lg:flex-[0_0_25%] xl:flex-[0_0_16.666%]"
-                  data-testid={`bank-logo-${bank.id}`}
+                  key={panel.id}
+                  className="flex-[0_0_100%] min-w-0 pl-4"
+                  data-testid={`lending-panel-${panel.id}`}
                 >
-                  <div className="flex items-center justify-center p-4 bg-white rounded-md h-24">
-                    <img
-                      src={bank.logo}
-                      alt={bank.name}
-                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
+                  <img
+                    src={panel.image}
+                    alt={`Lending Partners Panel ${panel.id}`}
+                    className="w-full h-auto"
+                  />
                 </div>
               ))}
             </div>
