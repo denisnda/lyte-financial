@@ -276,33 +276,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-accent">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 
-            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6"
-            data-testid="text-cta-title"
-          >
-            Ready to Start Your Journey?
-          </h2>
-          
-          <p 
-            className="text-primary-foreground text-lg md:text-xl mb-10 max-w-2xl mx-auto"
-            data-testid="text-cta-description"
-          >
-            Let's discuss how we can craft a bespoke financing solution for your business.
-          </p>
-          
-          <Button 
-            size="lg"
-            onClick={() => setLocation('/contact')}
-            className="font-medium text-base px-8"
-            data-testid="button-contact-cta"
-          >
-            Contact Us Today
-          </Button>
-        </div>
-      </section>
-
       <footer className="relative" data-testid="footer">
         <div className="bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
