@@ -31,13 +31,6 @@ export default function Header() {
               Meet our Team
             </a>
             <a 
-              href="#advantage" 
-              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
-              data-testid="link-advantage"
-            >
-              The Business Advantage
-            </a>
-            <a 
               href="#booking" 
               className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
               data-testid="link-booking"
