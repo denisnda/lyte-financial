@@ -61,12 +61,9 @@ export default function Home() {
                   <Building2 className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground text-center">
                 Business Purchases and Funding
               </h3>
-              <p className="text-primary-foreground text-base leading-relaxed text-center">
-                Secure funding to purchase your first business or expand your portfolio with expert guidance.
-              </p>
             </Card>
 
             <Card 
@@ -79,12 +76,9 @@ export default function Home() {
                   <HomeIcon className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground text-center">
                 Residential Lending
               </h3>
-              <p className="text-primary-foreground text-base leading-relaxed text-center">
-                Tailored home loan solutions for owner-occupied and investment properties with competitive rates.
-              </p>
             </Card>
 
             <Card 
@@ -97,12 +91,9 @@ export default function Home() {
                   <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground text-center">
                 Commercial Property
               </h3>
-              <p className="text-primary-foreground text-base leading-relaxed text-center">
-                Finance owner-occupied premises or investment properties with competitive rates and flexible terms.
-              </p>
             </Card>
 
             <Card 
@@ -115,12 +106,9 @@ export default function Home() {
                   <TrendingUp className="h-8 w-8 text-primary-foreground" />
                 </div>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-primary-foreground mb-4 text-center">
+              <h3 className="font-serif text-2xl font-bold text-primary-foreground text-center">
                 SMSF Residential and Commercial Lending
               </h3>
-              <p className="text-primary-foreground text-base leading-relaxed text-center">
-                Navigate complex SMSF structures to leverage your superannuation for property investment.
-              </p>
             </Card>
           </div>
         </div>
