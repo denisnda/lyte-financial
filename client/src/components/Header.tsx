@@ -1,4 +1,12 @@
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import logoImage from "@assets/image_1763876522255.png";
 
 export default function Header() {
@@ -16,13 +24,66 @@ export default function Header() {
           </a>
           
           <nav className="hidden lg:flex items-center gap-10">
-            <a 
-              href="#about" 
-              className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
-              data-testid="link-about"
-            >
-              About
-            </a>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className="bg-transparent text-primary-foreground text-lg hover-elevate active-elevate-2 px-5 py-3 font-semibold data-[state=open]:bg-transparent"
+                    data-testid="dropdown-client-solutions"
+                  >
+                    Our Client Solutions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="flex flex-col w-[280px] gap-1 p-2">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="/business-purchase"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            data-testid="link-business-purchase"
+                          >
+                            <div className="text-sm font-semibold leading-none">Business Purchases and Funding</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="/residential-lending"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            data-testid="link-residential-lending"
+                          >
+                            <div className="text-sm font-semibold leading-none">Residential Lending</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="/commercial-property"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            data-testid="link-commercial-property"
+                          >
+                            <div className="text-sm font-semibold leading-none">Commercial Property</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="/smsf-lending"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            data-testid="link-smsf-lending"
+                          >
+                            <div className="text-sm font-semibold leading-none">SMSF Residential and Commercial Lending</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             <a 
               href="/team" 
               className="text-lg hover-elevate active-elevate-2 px-5 py-3 rounded-md transition-colors font-semibold"
