@@ -6,6 +6,12 @@ import { Building2, Users, TrendingUp, Home as HomeIcon, Star } from "lucide-rea
 import heroImage from "@assets/image_1763875547582.png";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import cbaLogo from '@assets/stock_images/commonwealth_bank_of_cd95a3e1.jpg';
+import ingLogo from '@assets/stock_images/ing_bank_logo_austra_c9ff6c0c.jpg';
+import westpacLogo from '@assets/stock_images/westpac_bank_logo_au_379b9359.jpg';
+import stGeorgeLogo from '@assets/stock_images/st_george_bank_logo__13ba4291.jpg';
+import judoLogo from '@assets/stock_images/judo_bank_logo_austr_67cb11e4.jpg';
+import ampLogo from '@assets/stock_images/amp_bank_logo_austra_5f491124.jpg';
 
 const reviews = [
   {
@@ -40,11 +46,24 @@ const reviews = [
   },
 ];
 
+const banks = [
+  { id: 1, name: "Commonwealth Bank", logo: cbaLogo },
+  { id: 2, name: "ING", logo: ingLogo },
+  { id: 3, name: "Westpac", logo: westpacLogo },
+  { id: 4, name: "St George", logo: stGeorgeLogo },
+  { id: 5, name: "Judo Bank", logo: judoLogo },
+  { id: 6, name: "AMP", logo: ampLogo },
+];
+
 export default function Home() {
   const [, setLocation] = useLocation();
-  const [emblaRef, emblaApi] = useEmblaCarousel(
+  const [emblaRef] = useEmblaCarousel(
     { loop: true, align: 'start' },
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
+  const [emblaBankRef] = useEmblaCarousel(
+    { loop: true, align: 'start' },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
   );
 
   return (
@@ -199,6 +218,42 @@ export default function Home() {
                       {review.author}
                     </p>
                   </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-accent" data-testid="section-banks">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-10">
+            <h2 
+              className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2"
+              data-testid="text-banks-title"
+            >
+              Trusted Lending Partners
+            </h2>
+            <p className="text-primary text-base">
+              We work with Australia's leading financial institutions
+            </p>
+          </div>
+
+          <div className="overflow-hidden" ref={emblaBankRef}>
+            <div className="flex gap-12 items-center">
+              {banks.map((bank) => (
+                <div
+                  key={bank.id}
+                  className="flex-[0_0_50%] min-w-0 md:flex-[0_0_33.333%] lg:flex-[0_0_25%] xl:flex-[0_0_16.666%]"
+                  data-testid={`bank-logo-${bank.id}`}
+                >
+                  <div className="flex items-center justify-center p-4 bg-white rounded-md h-24">
+                    <img
+                      src={bank.logo}
+                      alt={bank.name}
+                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
