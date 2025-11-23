@@ -291,15 +291,6 @@ export default function Home() {
       </section>
 
       <footer className="relative" data-testid="footer">
-        <div className="h-48 md:h-64 overflow-hidden">
-          <img 
-            src={mapImage}
-            alt="Map showing Lyte Financial location"
-            className="w-full h-full object-cover"
-            data-testid="img-map"
-          />
-        </div>
-
         <div className="bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -342,13 +333,6 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <Button 
-                  variant="outline"
-                  className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                  data-testid="button-discover-story"
-                >
-                  Discover Our Story
-                </Button>
                 <Button 
                   variant="outline"
                   className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
