@@ -69,7 +69,11 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card className="p-8 bg-primary hover-elevate" data-testid="card-service-2">
+            <Card 
+              className="p-8 bg-primary hover-elevate active-elevate-2 cursor-pointer" 
+              onClick={() => setLocation('/residential-lending')}
+              data-testid="card-service-2"
+            >
               <div className="flex justify-center mb-6">
                 <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                   <HomeIcon className="h-8 w-8 text-primary-foreground" />
@@ -83,7 +87,11 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card className="p-8 bg-primary hover-elevate" data-testid="card-service-3">
+            <Card 
+              className="p-8 bg-primary hover-elevate active-elevate-2 cursor-pointer" 
+              onClick={() => setLocation('/commercial-property')}
+              data-testid="card-service-3"
+            >
               <div className="flex justify-center mb-6">
                 <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary-foreground" />
@@ -97,7 +105,11 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card className="p-8 bg-primary hover-elevate" data-testid="card-service-4">
+            <Card 
+              className="p-8 bg-primary hover-elevate active-elevate-2 cursor-pointer" 
+              onClick={() => setLocation('/smsf-lending')}
+              data-testid="card-service-4"
+            >
               <div className="flex justify-center mb-6">
                 <div className="h-16 w-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                   <TrendingUp className="h-8 w-8 text-primary-foreground" />

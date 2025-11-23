@@ -12,6 +12,12 @@ import CommercialScenario from "@/pages/CommercialScenario";
 import BusinessScenario from "@/pages/BusinessScenario";
 import BusinessPurchase from "@/pages/BusinessPurchase";
 import BusinessProcess from "@/pages/BusinessProcess";
+import ResidentialLending from "@/pages/ResidentialLending";
+import ResidentialProcess from "@/pages/ResidentialProcess";
+import CommercialProperty from "@/pages/CommercialProperty";
+import CommercialProcess from "@/pages/CommercialProcess";
+import SMSFLending from "@/pages/SMSFLending";
+import SMSFProcess from "@/pages/SMSFProcess";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +28,12 @@ function Router() {
       <Route path="/team" component={Team} />
       <Route path="/business-purchase" component={BusinessPurchase} />
       <Route path="/business-process" component={BusinessProcess} />
+      <Route path="/residential-lending" component={ResidentialLending} />
+      <Route path="/residential-process" component={ResidentialProcess} />
+      <Route path="/commercial-property" component={CommercialProperty} />
+      <Route path="/commercial-process" component={CommercialProcess} />
+      <Route path="/smsf-lending" component={SMSFLending} />
+      <Route path="/smsf-process" component={SMSFProcess} />
       <Route path="/scenarios" component={Scenarios} />
       <Route path="/scenarios/smsf" component={SMSFScenario} />
       <Route path="/scenarios/commercial" component={CommercialScenario} />
