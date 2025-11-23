@@ -15,7 +15,7 @@ export default function Header() {
     <header className="bg-primary text-primary-foreground">
       <div className="w-full px-6 md:px-12">
         <div className="flex items-center justify-between h-32">
-          <a href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md">
+          <a href="/" className="flex items-center gap-1 hover-elevate active-elevate-2 px-3 py-2 rounded-md">
             <img 
               src={wingsImage} 
               alt="Wings" 
