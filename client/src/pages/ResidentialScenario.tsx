@@ -44,7 +44,7 @@ export default function ResidentialScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-challenge-title"
                 >
                   The Challenge
@@ -54,11 +54,11 @@ export default function ResidentialScenario() {
             
             <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               <p data-testid="text-challenge-profile">
-                <span className="font-semibold text-primary-foreground">Client Profile:</span> A couple looking to purchase a new occupied property.
+                <span className="font-semibold text-primary">Client Profile:</span> A couple looking to purchase a new occupied property.
               </p>
               
               <p data-testid="text-challenge-problem">
-                <span className="font-semibold text-primary-foreground">The Problem:</span> They were concerned about being excluded from the market by selling their existing property first and then purchasing a new property. Given the upwardly moving market, they did not want to sell and be stuck renting, potentially missing out on desirable properties.
+                <span className="font-semibold text-primary">The Problem:</span> They were concerned about being excluded from the market by selling their existing property first and then purchasing a new property. Given the upwardly moving market, they did not want to sell and be stuck renting, potentially missing out on desirable properties.
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function ResidentialScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-solution-title"
                 >
                   Our Solution
@@ -84,21 +84,21 @@ export default function ResidentialScenario() {
             
             <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
               <div data-testid="text-solution-strategy">
-                <p className="font-semibold text-primary-foreground mb-3">The Strategy:</p>
+                <p className="font-semibold text-primary mb-3">The Strategy:</p>
                 <p className="pl-6">
                   We assisted the clients in securing a solution that allowed them to hold both properties for a period of six months.
                 </p>
               </div>
               
               <div data-testid="text-solution-mechanism">
-                <p className="font-semibold text-primary-foreground mb-3">The Mechanism:</p>
+                <p className="font-semibold text-primary mb-3">The Mechanism:</p>
                 <p className="pl-6">
                   This was achieved via a Bridging Finance Facility. The lender was able to advance the funds for the new purchase based on peak debt and equity levels.
                 </p>
               </div>
               
               <div data-testid="text-solution-outcome">
-                <p className="font-semibold text-primary-foreground mb-3">The Outcome:</p>
+                <p className="font-semibold text-primary mb-3">The Outcome:</p>
                 <p className="pl-6">
                   This solution provided the clients with the flexibility to get into their new home first and sufficient time (up to 6 months) to sell their existing property without market pressure.
                 </p>
@@ -129,7 +129,7 @@ export default function ResidentialScenario() {
                   1
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Initial Contact & Needs Analysis
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -149,7 +149,7 @@ export default function ResidentialScenario() {
                   2
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Documentation & Strategy Formulation
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -168,7 +168,7 @@ export default function ResidentialScenario() {
                   3
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Application Finalisation & Policy Check
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -187,7 +187,7 @@ export default function ResidentialScenario() {
                   4
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Approval & Stakeholder Management
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -206,7 +206,7 @@ export default function ResidentialScenario() {
                   5
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Settlement & Bridge-to-Sale Process
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">

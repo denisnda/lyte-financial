@@ -44,7 +44,7 @@ export default function SMSFResidentialScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-challenge-title"
                 >
                   The Challenge
@@ -54,11 +54,11 @@ export default function SMSFResidentialScenario() {
             
             <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               <p data-testid="text-challenge-profile">
-                <span className="font-semibold text-primary-foreground">Client Profile:</span> A self-employed professional looking to build their retirement wealth through property investment.
+                <span className="font-semibold text-primary">Client Profile:</span> A self-employed professional looking to build their retirement wealth through property investment.
               </p>
               
               <p data-testid="text-challenge-problem">
-                <span className="font-semibold text-primary-foreground">The Problem:</span> They wanted to purchase a residential investment property but were concerned about using personal funds and the associated tax implications. They had substantial superannuation savings and wanted to explore using their SMSF to acquire the property, but were unsure of the compliance requirements and lending options available.
+                <span className="font-semibold text-primary">The Problem:</span> They wanted to purchase a residential investment property but were concerned about using personal funds and the associated tax implications. They had substantial superannuation savings and wanted to explore using their SMSF to acquire the property, but were unsure of the compliance requirements and lending options available.
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function SMSFResidentialScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-solution-title"
                 >
                   Our Solution
@@ -84,21 +84,21 @@ export default function SMSFResidentialScenario() {
             
             <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
               <div data-testid="text-solution-strategy">
-                <p className="font-semibold text-primary-foreground mb-3">The Strategy:</p>
+                <p className="font-semibold text-primary mb-3">The Strategy:</p>
                 <p className="pl-6">
                   We structured a compliant SMSF residential property purchase that met all regulatory requirements while maximizing the client's borrowing capacity through a Limited Recourse Borrowing Arrangement (LRBA).
                 </p>
               </div>
               
               <div data-testid="text-solution-mechanism">
-                <p className="font-semibold text-primary-foreground mb-3">The Mechanism:</p>
+                <p className="font-semibold text-primary mb-3">The Mechanism:</p>
                 <p className="pl-6">
                   We secured SMSF lending from a specialist lender who understood the unique requirements of SMSF property purchases. The loan was structured as an LRBA, ensuring the SMSF's other assets remained protected while allowing the fund to purchase the residential property.
                 </p>
               </div>
               
               <div data-testid="text-solution-outcome">
-                <p className="font-semibold text-primary-foreground mb-3">The Outcome:</p>
+                <p className="font-semibold text-primary mb-3">The Outcome:</p>
                 <p className="pl-6">
                   The client successfully acquired a quality residential investment property through their SMSF. The rental income flows into the concessionally taxed superannuation environment, and the property serves as a long-term wealth-building asset for their retirement.
                 </p>
@@ -129,7 +129,7 @@ export default function SMSFResidentialScenario() {
                   1
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     SMSF Structure Review & Compliance Check
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -148,7 +148,7 @@ export default function SMSFResidentialScenario() {
                   2
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Property Selection & Investment Strategy
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -167,7 +167,7 @@ export default function SMSFResidentialScenario() {
                   3
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     LRBA Structure & Lender Matching
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -186,7 +186,7 @@ export default function SMSFResidentialScenario() {
                   4
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Application & Documentation
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -205,7 +205,7 @@ export default function SMSFResidentialScenario() {
                   5
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary-foreground mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
                     Settlement & Ongoing Compliance
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">

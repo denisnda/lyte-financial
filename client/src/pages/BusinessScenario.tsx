@@ -44,7 +44,7 @@ export default function BusinessScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-goal-title"
                 >
                   The Client's Goal
@@ -78,7 +78,7 @@ export default function BusinessScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-solution-title"
                 >
                   Our Strategic Solution
@@ -93,33 +93,33 @@ export default function BusinessScenario() {
               
               <div className="space-y-6">
                 <div data-testid="text-solution-gap">
-                  <p className="font-semibold text-primary-foreground mb-3">• Mitigating the Experience Gap:</p>
+                  <p className="font-semibold text-primary mb-3">• Mitigating the Experience Gap:</p>
                   <p className="pl-6">
                     We didn't just present him as an employee. We built a strong case highlighting his senior management experience, which included oversight of director reports, managing large budgets, and accountability for KPIs. We successfully demonstrated that these skills made him ideally suited to take over the director-level duties and work cohesively with the workshop's existing operations manager.
                   </p>
                 </div>
                 
                 <div data-testid="text-solution-assessment">
-                  <p className="font-semibold text-primary-foreground mb-3">• Detailed Business Assessment:</p>
+                  <p className="font-semibold text-primary mb-3">• Detailed Business Assessment:</p>
                   <p className="pl-6">
                     We thoroughly assessed the workshop's financials, supply chains, product demand, and key accounts to prove its viability.
                   </p>
                 </div>
                 
                 <div data-testid="text-solution-funding">
-                  <p className="font-semibold text-primary-foreground mb-3">• A Multi-Layered Funding Structure:</p>
+                  <p className="font-semibold text-primary mb-3">• A Multi-Layered Funding Structure:</p>
                   <p className="pl-6 mb-3">
                     We overlaid the applicant's proven experience onto the business's solid structure. With this strong foundation, we structured the finance package by drawing from multiple sources to finalise the full amount:
                   </p>
                   <div className="pl-6 space-y-2">
                     <p>
-                      <span className="font-semibold text-primary-foreground">- Property Equity:</span> We accessed equity from the applicant's existing properties.
+                      <span className="font-semibold text-primary">- Property Equity:</span> We accessed equity from the applicant's existing properties.
                     </p>
                     <p>
-                      <span className="font-semibold text-primary-foreground">- Cash Contribution:</span> We factored in the applicant's own cash contribution.
+                      <span className="font-semibold text-primary">- Cash Contribution:</span> We factored in the applicant's own cash contribution.
                     </p>
                     <p>
-                      <span className="font-semibold text-primary-foreground">- Business Assets:</span> We secured the final portion of the loan via a charge over the high-value vehicles and equipment within the engineering business itself.
+                      <span className="font-semibold text-primary">- Business Assets:</span> We secured the final portion of the loan via a charge over the high-value vehicles and equipment within the engineering business itself.
                     </p>
                   </div>
                 </div>

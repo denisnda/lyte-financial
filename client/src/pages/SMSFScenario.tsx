@@ -43,7 +43,7 @@ export default function SMSFScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-goal-title"
                 >
                   The Client's Goal
@@ -73,7 +73,7 @@ export default function SMSFScenario() {
               </div>
               <div>
                 <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6"
+                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-solution-title"
                 >
                   Our Strategic Solution
