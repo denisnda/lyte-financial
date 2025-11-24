@@ -14,7 +14,7 @@ export default function BusinessScenario() {
           data-testid="img-hero-background"
         />
         
-        <div className="absolute inset-0 bg-primary/95" />
+        <div className="absolute inset-0 bg-primary" />
         
         <div className="relative z-10 w-full px-6 md:px-12 text-center">
           <div className="max-w-4xl mx-auto">
