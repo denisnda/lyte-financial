@@ -7,7 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import logoImage from "@assets/final logo_1763934965157.jpg";
+import logoImage from "@assets/final logo_1763957147317.jpg";
 
 export default function Header() {
   return (
