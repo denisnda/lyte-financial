@@ -129,7 +129,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <Card 
               className="p-8 bg-primary hover-elevate active-elevate-2 cursor-pointer" 
-              onClick={() => setLocation('/business-purchase')}
+              onClick={() => setLocation('/scenarios/business')}
               data-testid="card-service-1"
             >
               <div className="flex justify-center mb-6">
@@ -344,7 +344,7 @@ export default function Home() {
               <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
                 <a href="/" className="hover:underline">Home</a>
                 <a href="/team" className="hover:underline">About Us</a>
-                <a href="/business-purchase" className="hover:underline">Business & SME Lending</a>
+                <a href="/scenarios/business" className="hover:underline">Business & SME Lending</a>
                 <a href="/commercial-property" className="hover:underline">Commercial Lending</a>
                 <a href="/residential-lending" className="hover:underline">Residential Lending</a>
                 <a href="/smsf-lending" className="hover:underline">Self-Managed Super Fund (SMSF) Lending</a>
