@@ -29,7 +29,7 @@ export default function ResidentialScenario() {
               style={{ textShadow: 'none' }}
               data-testid="text-hero-title"
             >
-              Purchasing a New Property While Holding Your Existing Home (Bridging Finance)
+              Purchasing a New Property While Holding Your Existing Home
             </h1>
             <p 
               className="text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto text-white"
