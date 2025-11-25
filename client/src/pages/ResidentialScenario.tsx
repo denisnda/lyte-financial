@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
-import { Target, Lightbulb, TrendingUp, AlertTriangle, ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Target, Lightbulb, TrendingUp, ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@assets/image_1764036161490.png";
 import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b16.jpg';
@@ -297,7 +297,7 @@ export default function ResidentialScenario() {
                 </p>
               </div>
               
-              <div className="bg-card p-8 md:p-12 rounded-lg border border-border mb-8">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
                 <div className="flex items-start gap-6 mb-6">
                   <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
                     <Target className="h-8 w-8 text-primary" />
@@ -307,7 +307,7 @@ export default function ResidentialScenario() {
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
                       data-testid="text-goal-title-2"
                     >
-                      The Client's Goal
+                      The Client's Goal & Challenge
                     </h3>
                   </div>
                 </div>
@@ -342,51 +342,35 @@ export default function ResidentialScenario() {
                       As first home buyers, they needed a clear path forward and expert guidance through a complex lending landscape.
                     </p>
                   </div>
-                </div>
-              </div>
 
-              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="bg-destructive/10 p-4 rounded-full flex-shrink-0">
-                    <AlertTriangle className="h-8 w-8 text-destructive" />
-                  </div>
                   <div>
-                    <h3 
-                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
-                      data-testid="text-challenge-title-2"
-                    >
-                      The Client's Challenge
-                    </h3>
+                    <p className="font-semibold text-primary mb-2">The Challenge:</p>
+                    <p className="pl-6 mb-3">John & Barbara had:</p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Strong, stable incomes</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Limited savings</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A portion of their deposit coming from a family gift</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>No prior knowledge of government schemes or lender requirements</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-4">
+                      They were unsure whether lenders would accept their deposit structure and did not want to miss out on a suitable property due to delays or uncertainty.
+                    </p>
+                    <p className="pl-6 mt-2 font-semibold text-primary">
+                      They needed a solution that maximised their borrowing power while minimising upfront costs.
+                    </p>
                   </div>
-                </div>
-                
-                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-                  <p className="mb-3">John & Barbara had:</p>
-                  <ul className="pl-6 space-y-2 mb-4">
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>Strong, stable incomes</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>Limited savings</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>A portion of their deposit coming from a family gift</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>No prior knowledge of government schemes or lender requirements</span>
-                    </li>
-                  </ul>
-                  
-                  <p>
-                    They were unsure whether lenders would accept their deposit structure and did not want to miss out on a suitable property due to delays or uncertainty.
-                  </p>
-                  <p className="font-semibold text-primary">
-                    They needed a solution that maximised their borrowing power while minimising upfront costs.
-                  </p>
                 </div>
               </div>
             </div>
