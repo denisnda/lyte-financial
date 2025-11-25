@@ -311,14 +311,31 @@ export default function BusinessScenario() {
               </div>
             </div>
             
-            <Button 
-              variant="outline"
-              onClick={() => window.open('https://calendly.com/tony-lytefinancial/30min?month=2025-11', '_blank')}
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="button-schedule-meeting"
-            >
-              Schedule a Meeting
-            </Button>
+            <div className="flex flex-col items-center gap-2">
+              <p className="font-semibold text-sm">Supporting Clients Australia Wide</p>
+              <div className="flex gap-3">
+                <a href="/contact">
+                  <Button 
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                    data-testid="button-enquire-now"
+                  >
+                    Enquire Now
+                  </Button>
+                </a>
+                <a 
+                  href="https://calendly.com/tony-lytefinancial/30min?month=2025-11" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button 
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                    data-testid="button-book-meeting"
+                  >
+                    Book A Meeting
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

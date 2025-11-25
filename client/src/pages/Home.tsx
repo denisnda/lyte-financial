@@ -332,8 +332,7 @@ export default function Home() {
                 <p className="font-semibold text-lg">Supporting Clients Australia Wide</p>
                 <div className="flex flex-col gap-3">
                   <Button 
-                    variant="outline"
-                    className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                     onClick={() => setLocation('/contact')}
                     data-testid="button-enquire-now"
                   >
@@ -345,8 +344,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <Button 
-                      variant="outline"
-                      className="w-full border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                      className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                       data-testid="button-book-meeting"
                     >
                       Book A Meeting
