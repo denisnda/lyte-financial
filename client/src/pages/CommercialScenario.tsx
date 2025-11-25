@@ -182,8 +182,13 @@ export default function CommercialScenario() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${constructionImage})` }}
+        />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <h2 
               className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4"
