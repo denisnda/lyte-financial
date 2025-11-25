@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import tonyPhoto from "@assets/image_1764038248473.png";
 import jarredPhoto from "@assets/Jarred Photo_1764038929340.png";
-import mathewPhoto from "@assets/Matts pic_1764038338581.png";
+import mathewPhoto from "@assets/Untitled design (4)_1764062211174.png";
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
 export default function Team() {
@@ -74,7 +74,7 @@ export default function Team() {
                   src={mathewPhoto}
                   alt="Mathew Hall - Advisory Chairman"
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 10%' }}
+                  style={{ objectPosition: 'center 15%' }}
                   data-testid="img-mathew-photo"
                 />
               </div>
