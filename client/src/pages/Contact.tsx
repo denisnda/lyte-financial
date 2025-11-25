@@ -59,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-primary flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-primary via-primary/90 to-accent flex flex-col">
       <Header />
 
       <main className="flex-1 py-16 md:py-24">
