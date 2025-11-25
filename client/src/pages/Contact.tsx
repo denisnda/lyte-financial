@@ -93,7 +93,7 @@ export default function Contact() {
                     className="text-foreground hover:text-primary transition-colors"
                     data-testid="link-phone"
                   >
-                    02 9099 3613
+                    (02) 9099 3613
                   </a>
                 </div>
 
