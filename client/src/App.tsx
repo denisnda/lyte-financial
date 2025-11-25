@@ -21,6 +21,7 @@ import CommercialProperty from "@/pages/CommercialProperty";
 import CommercialProcess from "@/pages/CommercialProcess";
 import SMSFLending from "@/pages/SMSFLending";
 import SMSFProcess from "@/pages/SMSFProcess";
+import BorrowingPowerCalculator from "@/pages/BorrowingPowerCalculator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/commercial-process" component={CommercialProcess} />
       <Route path="/smsf-lending" component={SMSFLending} />
       <Route path="/smsf-process" component={SMSFProcess} />
+      <Route path="/calculators/borrowing-power" component={BorrowingPowerCalculator} />
       <Route path="/scenarios" component={Scenarios} />
       <Route path="/scenarios/smsf" component={SMSFScenario} />
       <Route path="/scenarios/smsf-residential" component={SMSFResidentialScenario} />
