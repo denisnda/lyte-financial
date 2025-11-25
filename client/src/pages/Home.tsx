@@ -213,11 +213,11 @@ export default function Home() {
           </div>
 
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex">
               {reviews.map((review) => (
                 <div
                   key={review.id}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
                   data-testid={`review-card-${review.id}`}
                 >
                   <Card className="p-6 h-full bg-white">
