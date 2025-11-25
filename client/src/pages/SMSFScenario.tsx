@@ -7,7 +7,7 @@ import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b1
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
 export default function SMSFScenario() {
-  const [activeCase, setActiveCase] = useState<"partners" | "personal">("partners");
+  const [activeCase, setActiveCase] = useState<"partners" | "personal" | "refinance">("partners");
 
   return (
     <div className="min-h-screen bg-background">
@@ -73,6 +73,17 @@ export default function SMSFScenario() {
               data-testid="button-case-personal"
             >
               Personal Funds to SMSF Loan
+            </Button>
+            <Button
+              onClick={() => setActiveCase("refinance")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "refinance"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-refinance"
+            >
+              Refinancing High-Rate SMSF Loans
             </Button>
           </div>
         </div>
@@ -516,6 +527,318 @@ export default function SMSFScenario() {
                     </li>
                     <li data-testid="text-outcome-2-5">
                       <span className="font-semibold text-primary">Strategic Flexibility Maintained:</span> The Client continued their transition into self-employment without sacrificing investment momentum.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeCase === "refinance" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 3
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  Refinancing High-Rate SMSF Loans
+                </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we helped clients reduce their SMSF loan rate by more than 1% despite major banks exiting the SMSF lending space
+                </p>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-3"
+                    >
+                      The Client's Goal & Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p>
+                    SMSF lending is often treated as a "set-and-forget" arrangement — but many trustees don't realise their SMSF loan rates are significantly higher than necessary. With most major banks withdrawing from SMSF lending, countless SMSFs are left on old, uncompetitive loan products that quietly erode long-term super balances.
+                  </p>
+
+                  <div>
+                    <p className="mb-4">
+                      The client held an existing SMSF property loan that had not been reviewed for several years. Their goals were simple:
+                    </p>
+                    <ul className="pl-6 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Reduce their loan interest rate</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Lower long-term costs inside their SMSF</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Improve cash flow and investment returns</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Ensure their SMSF structure remained compliant and sustainable</span>
+                      </li>
+                    </ul>
+                    <p>
+                      They suspected their interest rate was high — but had no idea how far the SMSF lending market had moved.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-primary mb-3">The Challenge:</p>
+                    <p className="pl-6 mb-3">The SMSF lending landscape has changed dramatically:</p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Major banks have exited the SMSF lending space</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Remaining lenders often have niche policies</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Many SMSF loans automatically roll into high revert rates</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Trustees typically don't receive proactive rate reviews</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Old SMSF products are often 1%–2% above market rates</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mb-3">The client's existing loan was:</p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>On an outdated SMSF product</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Sitting over 1% above competitive rates</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>With no lender-driven review or repricing available</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6">
+                      They needed a full refinance review — but SMSF lending requires strict compliance, a LRBA structure, trustee documentation, and a lender that still operates in this niche.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-3"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-3-step-1">
+                    <p className="font-semibold text-primary mb-3">1. Full SMSF Lending Review</p>
+                    <p className="pl-6 mb-3">We reviewed the client's:</p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Current LRBA structure</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Trust deed and bare trust documents</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Interest rate history</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Repayment term and strategy</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>SMSF cash flow and investment plans</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This confirmed the loan was significantly overpriced and suitable for refinance.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-3-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Identifying Active SMSF Lenders</p>
+                    <p className="pl-6 mb-3">
+                      Because most major banks no longer offer SMSF loans, we:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Assessed specialist SMSF lenders still active in the market</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Compared rates, fees, and product structures</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Matched their LRBA setup to lenders who accepted their trust documents</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This ensured a smooth transition without structural issues.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-3-step-3">
+                    <p className="font-semibold text-primary mb-3">3. Structuring the Refinance Correctly</p>
+                    <p className="pl-6 mb-3">
+                      SMSF refinancing requires precision. We:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Aligned the new lender's requirements with the existing bare trust</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Updated trustee documentation where necessary</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Ensured compliance with SIS Act rules</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Structured the loan to match the SMSF's long-term investment horizon</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div data-testid="text-solution-3-step-4">
+                    <p className="font-semibold text-primary mb-3">4. Negotiating a Significantly Better Rate</p>
+                    <p className="pl-6 mb-3">
+                      We successfully secured a new SMSF loan that was:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Over 1% lower than their existing interest rate</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>On a modern, flexible SMSF lending product</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>With improved cash flow and long-term savings</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This reduction alone increased the SMSF's projected retirement value substantially.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-solution-3-step-5">
+                    <p className="font-semibold text-primary mb-3">5. Seamless Refinance & Settlement</p>
+                    <p className="pl-6 mb-3">
+                      We handled:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>All lender communication</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Document preparation</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Trustee signatures</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Settlement coordination</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      The refinance was completed without disruption to the SMSF's investment property.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-3"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-3-1">
+                      <span className="font-semibold text-primary">Interest Rate Reduced by More Than 1%:</span> A significant cost saving in an SMSF environment where every dollar compounds.
+                    </li>
+                    <li data-testid="text-outcome-3-2">
+                      <span className="font-semibold text-primary">Improved SMSF Cash Flow & Long-Term Investment Returns:</span> Lower repayments mean more money stays invested for retirement growth.
+                    </li>
+                    <li data-testid="text-outcome-3-3">
+                      <span className="font-semibold text-primary">Modern, Competitive SMSF Loan Structure:</span> The client moved off an outdated product and onto a lender who still actively supports SMSF borrowers.
+                    </li>
+                    <li data-testid="text-outcome-3-4">
+                      <span className="font-semibold text-primary">Full Compliance Maintained:</span> All LRBA and trustee documentation remained audit-ready.
+                    </li>
+                    <li data-testid="text-outcome-3-5">
+                      <span className="font-semibold text-primary">A Long-Term Refinancing Strategy in Place:</span> We set review intervals so the SMSF never drifts into an overpriced loan again.
                     </li>
                   </ul>
                 </div>
