@@ -100,11 +100,11 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                   <a 
-                    href="mailto:ask@lytefinancial.com.au" 
+                    href="mailto:admin@lytefinancial.com.au" 
                     className="text-foreground hover:text-primary transition-colors"
                     data-testid="link-email"
                   >
-                    ask@lytefinancial.com.au
+                    admin@lytefinancial.com.au
                   </a>
                 </div>
 
