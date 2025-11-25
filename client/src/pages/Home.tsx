@@ -101,11 +101,18 @@ export default function Home() {
               Simplifying the Complex
             </h1>
             <p 
-              className="text-xl md:text-2xl font-medium tracking-wide"
+              className="text-xl md:text-2xl font-medium tracking-wide mb-8"
               data-testid="text-hero-tagline"
             >
               A funding solution for everything.
             </p>
+            <Button 
+              onClick={() => setLocation('/contact')}
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto"
+              data-testid="button-speak-expert"
+            >
+              Speak to a Leading Lending Expert Today
+            </Button>
           </div>
         </div>
       </section>
