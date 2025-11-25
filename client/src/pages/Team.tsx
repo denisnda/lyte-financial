@@ -21,11 +21,12 @@ export default function Team() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-card rounded-lg overflow-hidden border border-border" data-testid="card-team-tony">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src={teamPhoto}
                   alt="Tony Ly - Director"
-                  className="w-full h-full object-cover object-left-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 20%' }}
                   data-testid="img-tony-photo"
                 />
               </div>
@@ -36,11 +37,12 @@ export default function Team() {
             </div>
 
             <div className="bg-card rounded-lg overflow-hidden border border-border" data-testid="card-team-jarred">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src={jarredPhoto}
                   alt="Jarred Aranza - Finance Specialist"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 15%' }}
                   data-testid="img-jarred-photo"
                 />
               </div>
@@ -51,11 +53,12 @@ export default function Team() {
             </div>
 
             <div className="bg-card rounded-lg overflow-hidden border border-border" data-testid="card-team-mathew">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src={mathewPhoto}
                   alt="Mathew Hall - Advisory Chairman"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 15%' }}
                   data-testid="img-mathew-photo"
                 />
               </div>
