@@ -72,7 +72,7 @@ export default function SMSFScenario() {
               }`}
               data-testid="button-case-personal"
             >
-              Personal Funds to SMSF Loan
+              From PAYG to Self-Employed: Structuring a Compliant SMSF Loan
             </Button>
             <Button
               onClick={() => setActiveCase("refinance")}
@@ -97,9 +97,12 @@ export default function SMSFScenario() {
                 <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   Case Study 1
                 </span>
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
                   SMSF Business Premises Purchase
                 </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we helped a client use their SMSF to purchase a commercial property and lease it back to their own business as a new base of operations
+                </p>
               </div>
               
               <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
@@ -351,12 +354,15 @@ export default function SMSFScenario() {
                 <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   Case Study 2
                 </span>
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary">
-                  Structuring an SMSF Loan from Personal Funds
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  From PAYG to Self-Employed: Structuring a Compliant SMSF Loan
                 </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we saved an SMSF property purchase after the client moved from PAYG to self-employment and lost their pre-approval
+                </p>
               </div>
               
-              <div className="bg-card p-8 md:p-12 rounded-lg border border-border mb-8">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
                 <div className="flex items-start gap-6 mb-6">
                   <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
                     <Target className="h-8 w-8 text-primary" />
@@ -366,64 +372,41 @@ export default function SMSFScenario() {
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
                       data-testid="text-goal-title-2"
                     >
-                      The Client's Goal
+                      The Client's Goal & Challenge
                     </h3>
                   </div>
                 </div>
                 
-                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
-                  <p data-testid="text-goal-description-2-1">
-                    The Client wanted to purchase an investment property through their Self-Managed Super Fund (SMSF) as part of a long-term wealth-building strategy.
-                  </p>
-                  
-                  <p data-testid="text-goal-description-2-2">
-                    A pre-approval for an SMSF loan had already been secured under their PAYG income, and the Client was ready to proceed with the purchase.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="bg-destructive/10 p-4 rounded-full flex-shrink-0">
-                    <AlertTriangle className="h-8 w-8 text-destructive" />
-                  </div>
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
                   <div>
-                    <h3 
-                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
-                      data-testid="text-challenge-title"
-                    >
-                      The Challenge
-                    </h3>
+                    <p className="mb-4" data-testid="text-goal-description-2-1">
+                      The Client wanted to purchase an investment property through their Self-Managed Super Fund (SMSF) as part of a long-term wealth-building strategy. A pre-approval for an SMSF loan had already been secured under their PAYG income, and the Client was ready to proceed with the purchase.
+                    </p>
                   </div>
-                </div>
-                
-                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
-                  <p data-testid="text-challenge-1">
-                    During the transaction, the Client transitioned from PAYG employment to self-employment.
-                  </p>
-                  
-                  <p className="font-semibold" data-testid="text-challenge-2">
-                    This created an immediate problem:
-                  </p>
-                  
-                  <ul className="space-y-3 pl-6">
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>Lenders generally require two years of financials for self-employed borrowers, even for SMSF loans.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>As a result, the lender cancelled the pre-approval, midway through the purchasing process.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span>Although the SMSF held some cash, it did not have enough to complete the full purchase price on its own.</span>
-                    </li>
-                  </ul>
-                  
-                  <p className="font-semibold text-destructive" data-testid="text-challenge-3">
-                    Without a solution, the Client risked losing the investment opportunity.
-                  </p>
+
+                  <div>
+                    <p className="font-semibold text-primary mb-3">The Challenge:</p>
+                    <p className="pl-6 mb-3">
+                      During the transaction, the Client transitioned from PAYG employment to self-employment. This created an immediate problem:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Lenders generally require two years of financials for self-employed borrowers, even for SMSF loans</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>As a result, the lender cancelled the pre-approval, midway through the purchasing process</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Although the SMSF held some cash, it did not have enough to complete the full purchase price on its own</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 font-semibold text-primary">
+                      Without a solution, the Client risked losing the investment opportunity.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
