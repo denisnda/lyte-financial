@@ -6,7 +6,7 @@ import heroImage from "@assets/image_1764036161490.png";
 import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b16.jpg';
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
-type CaseStudyType = "bridging";
+type CaseStudyType = "bridging" | "firsthome";
 
 export default function ResidentialScenario() {
   const [activeCase, setActiveCase] = useState<CaseStudyType>("bridging");
@@ -44,7 +44,7 @@ export default function ResidentialScenario() {
       </section>
 
       <section className="py-8 md:py-12 bg-background border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="text-center mb-6">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
               Select a Case Study
@@ -66,6 +66,17 @@ export default function ResidentialScenario() {
             >
               Buying Before Selling: A Strategic Bridging Finance Solution
             </Button>
+            <Button
+              onClick={() => setActiveCase("firsthome")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "firsthome"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-firsthome"
+            >
+              First Home Buyer: Navigating the Property Market with Confidence
+            </Button>
           </div>
         </div>
       </section>
@@ -76,7 +87,7 @@ export default function ResidentialScenario() {
             <div className="max-w-5xl mx-auto px-6 md:px-12">
               <div className="text-center mb-8">
                 <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                  Case Study
+                  Case Study 1
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
                   Purchasing a New Property While Holding Your Existing Home
@@ -94,7 +105,7 @@ export default function ResidentialScenario() {
                   <div>
                     <h3 
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
-                      data-testid="text-goal-title"
+                      data-testid="text-goal-title-1"
                     >
                       The Client's Goal & Challenge
                     </h3>
@@ -156,7 +167,7 @@ export default function ResidentialScenario() {
                   <div>
                     <h3 
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
-                      data-testid="text-solution-title"
+                      data-testid="text-solution-title-1"
                     >
                       Our Strategic Solution
                     </h3>
@@ -164,14 +175,14 @@ export default function ResidentialScenario() {
                 </div>
                 
                 <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
-                  <div data-testid="text-solution-step-1">
+                  <div data-testid="text-solution-1-step-1">
                     <p className="font-semibold text-primary mb-3">1. Designing a Dual-Property Holding Strategy</p>
                     <p className="pl-6">
                       We worked with the clients to develop a structure that allowed them to hold both properties simultaneously, giving them full flexibility during the transition period.
                     </p>
                   </div>
                   
-                  <div data-testid="text-solution-step-2">
+                  <div data-testid="text-solution-1-step-2">
                     <p className="font-semibold text-primary mb-3">2. Utilising a Bridging Finance Facility</p>
                     <p className="pl-6 mb-3">
                       We implemented a bridging finance solution that enabled the lender to fund the new purchase upfront. The lender assessed:
@@ -195,7 +206,7 @@ export default function ResidentialScenario() {
                     </p>
                   </div>
                   
-                  <div data-testid="text-solution-step-3">
+                  <div data-testid="text-solution-1-step-3">
                     <p className="font-semibold text-primary mb-3">3. Structuring the Facility for Client Control</p>
                     <p className="pl-6 mb-3">
                       The bridging structure allowed for:
@@ -237,7 +248,7 @@ export default function ResidentialScenario() {
                   <div>
                     <h3 
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
-                      data-testid="text-outcome-title"
+                      data-testid="text-outcome-title-1"
                     >
                       The Positive Outcome
                     </h3>
@@ -245,22 +256,297 @@ export default function ResidentialScenario() {
                 </div>
                 
                 <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-                  <p className="font-medium text-primary" data-testid="text-outcome-intro">
+                  <p className="font-medium text-primary" data-testid="text-outcome-intro-1">
                     A smooth, empowered transition into their new home:
                   </p>
                   
                   <ul className="space-y-4 pl-6">
-                    <li data-testid="text-outcome-1">
+                    <li data-testid="text-outcome-1-1">
                       <span className="font-semibold text-primary">Successful Purchase of Their New Home:</span> The clients secured their ideal home at the right time, without needing to wait for their existing property to sell.
                     </li>
-                    <li data-testid="text-outcome-2">
+                    <li data-testid="text-outcome-1-2">
                       <span className="font-semibold text-primary">No Forced Sale or Renting Period:</span> They avoided temporary accommodation, rushed deadlines, and the risks associated with selling in haste.
                     </li>
-                    <li data-testid="text-outcome-3">
+                    <li data-testid="text-outcome-1-3">
                       <span className="font-semibold text-primary">Twelve Months of Flexibility to Sell Strategically:</span> The bridging facility provided a generous window for preparing and listing the existing home, allowing them to sell under favourable market conditions.
                     </li>
-                    <li data-testid="text-outcome-4">
+                    <li data-testid="text-outcome-1-4">
                       <span className="font-semibold text-primary">A Stress-Free Transition Between Homes:</span> With the new home settled and a clear pathway to selling the existing property, the clients experienced a seamless changeover tailored to their needs.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeCase === "firsthome" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 2
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  First Home Buyer: Navigating the Property Market with Confidence
+                </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  Buying your first home can feel overwhelming—especially when savings are limited and eligibility rules are unclear. This case study shows how we helped first-time buyers secure their home sooner and with minimal upfront costs.
+                </p>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border mb-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-2"
+                    >
+                      The Client's Goal
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div>
+                    <p className="font-semibold text-primary mb-2">Clients: John & Barbara, Newcastle NSW</p>
+                    <p className="pl-6">
+                      <strong className="text-primary">Goal:</strong> Purchase their first home with a low deposit and minimal upfront expenses.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <p className="pl-6 mb-3">
+                      They were ready to enter the property market but wanted clarity on:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>How much they could borrow</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Whether their deposit sources—including a small family gift—were acceptable to lenders</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>What government incentives they could access to reduce upfront costs</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-4">
+                      As first home buyers, they needed a clear path forward and expert guidance through a complex lending landscape.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-destructive/10 p-4 rounded-full flex-shrink-0">
+                    <AlertTriangle className="h-8 w-8 text-destructive" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-challenge-title-2"
+                    >
+                      The Client's Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="mb-3">John & Barbara had:</p>
+                  <ul className="pl-6 space-y-2 mb-4">
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>Strong, stable incomes</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>Limited savings</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>A portion of their deposit coming from a family gift</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>No prior knowledge of government schemes or lender requirements</span>
+                    </li>
+                  </ul>
+                  
+                  <p>
+                    They were unsure whether lenders would accept their deposit structure and did not want to miss out on a suitable property due to delays or uncertainty.
+                  </p>
+                  <p className="font-semibold text-primary">
+                    They needed a solution that maximised their borrowing power while minimising upfront costs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-2"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-2-step-1">
+                    <p className="font-semibold text-primary mb-3">1. Identifying Eligibility for the First Home Guarantee Scheme</p>
+                    <p className="pl-6">
+                      We assessed the clients' financial position and determined they were strong candidates for the First Home Guarantee, which allows eligible first-time buyers to purchase with just a 5% deposit and no LMI.
+                    </p>
+                    <p className="pl-6 mt-2">
+                      This immediately reduced their upfront contribution and accelerated their buying timeline.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-2-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Comprehensive Borrowing Capacity & Deposit Assessment</p>
+                    <p className="pl-6 mb-3">
+                      We completed a full borrowing analysis, considering:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Income stability</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Liabilities</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Living expenses</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Deposit breakdown, including the family gift</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      We prepared a lender-ready explanation to ensure full clarity and compliance.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-2-step-3">
+                    <p className="font-semibold text-primary mb-3">3. Managing the Guarantee Application & Lender Liaison</p>
+                    <p className="pl-6 mb-3">
+                      We coordinated all steps of the First Home Guarantee application, including:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Confirming their eligibility</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Preparing documentation</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Securing lender acceptance of the family-gift component</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Fast-tracking the approval process</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      We also communicated directly with the lender, real estate agents, and conveyancer to keep the purchase moving efficiently.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-solution-2-step-4">
+                    <p className="font-semibold text-primary mb-3">4. End-to-End Support From Contract to Settlement</p>
+                    <p className="pl-6 mb-3">
+                      Throughout the transaction, we:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Reviewed and updated borrowing figures as required</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Liaised with the conveyancer to align contract, deposit, and scheme requirements</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Ensured the lender met all deadlines for approval and settlement</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Provided ongoing guidance to give the clients full confidence at each stage</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-2"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="font-medium text-primary" data-testid="text-outcome-intro-2">
+                    A smooth first home purchase with significant cost savings:
+                  </p>
+                  
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-2-1">
+                      <span className="font-semibold text-primary">Approved and Settled Within 4 Weeks:</span> The clients secured finance quickly, allowing them to proceed confidently with the purchase.
+                    </li>
+                    <li data-testid="text-outcome-2-2">
+                      <span className="font-semibold text-primary">Saved Approximately $12,000 in Lenders Mortgage Insurance:</span> The First Home Guarantee eliminated LMI entirely, dramatically reducing upfront costs.
+                    </li>
+                    <li data-testid="text-outcome-2-3">
+                      <span className="font-semibold text-primary">Purchased With Only a 5% Deposit:</span> Their savings and family gift were accepted without issue, simplifying the process.
+                    </li>
+                    <li data-testid="text-outcome-2-4">
+                      <span className="font-semibold text-primary">Moved Into Their New Home Sooner Than Expected:</span> With reduced costs and a clear pathway, the clients were able to buy months earlier than they anticipated.
+                    </li>
+                    <li data-testid="text-outcome-2-5">
+                      <span className="font-semibold text-primary">A Confident Entry Into the Property Market:</span> The clients received clear direction, lender support, and full guidance through a process that otherwise would have felt overwhelming.
                     </li>
                   </ul>
                 </div>
@@ -285,7 +571,7 @@ export default function ResidentialScenario() {
               Five-Stage Process Map
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-              Our structured approach to bridging finance
+              Our structured approach to residential lending
             </p>
           </div>
 
@@ -300,7 +586,7 @@ export default function ResidentialScenario() {
                     Initial Contact & Needs Analysis
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Initial in-depth conversation with the client to understand their specific purchasing goals, current financial position, and concerns regarding market timing and selling the existing property.
+                    Initial in-depth conversation with the client to understand their specific purchasing goals, current financial position, and concerns regarding market timing and lending requirements.
                   </p>
                 </div>
               </div>
@@ -319,7 +605,7 @@ export default function ResidentialScenario() {
                     Documentation & Strategy Formulation
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Collection of all necessary financial documentation. This step involves calculating the Peak Debt required for the new purchase and determining the equity available in the existing property to structure the bridging finance proposal.
+                    Collection of all necessary financial documentation. This step involves calculating borrowing capacity, assessing deposit sources, and identifying eligible government schemes or lending solutions.
                   </p>
                 </div>
               </div>
@@ -338,7 +624,7 @@ export default function ResidentialScenario() {
                     Application Finalisation & Policy Check
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Finalisation of the application, including the proposed sale date of the existing property. Identification and adherence to specific lender credit policies required for bridging finance facilities (e.g., acceptable LVRs, interest-only period, and maximum bridging term).
+                    Finalisation of the application with adherence to specific lender credit policies. Identification of optimal lender match based on client circumstances and property requirements.
                   </p>
                 </div>
               </div>
@@ -357,7 +643,7 @@ export default function ResidentialScenario() {
                     Approval & Stakeholder Management
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Submission and approval of the new application through the lender. Continuous engagement with key stakeholders (lender, valuer) to ensure the bridging finance approval is secured and all conditions are met promptly.
+                    Submission and approval of the application through the lender. Continuous engagement with key stakeholders (lender, valuer, conveyancer) to ensure approval is secured and all conditions are met promptly.
                   </p>
                 </div>
               </div>
@@ -373,10 +659,10 @@ export default function ResidentialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Settlement & Bridge-to-Sale Process
+                    Settlement & Completion
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Processing from approval to settlement. Ensuring all legal and lender documents are correct. Coordinating with solicitors and the existing lender to meet the settlement date for the new purchase, and setting a clear path for the subsequent sale of the existing property.
+                    Processing from approval to settlement. Ensuring all legal and lender documents are correct. Coordinating with solicitors and lenders to meet the settlement date and successfully complete the purchase.
                   </p>
                 </div>
               </div>
