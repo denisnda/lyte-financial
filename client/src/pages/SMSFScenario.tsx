@@ -7,7 +7,7 @@ import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b1
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
 export default function SMSFScenario() {
-  const [activeCase, setActiveCase] = useState<"partners" | "personal" | "refinance">("partners");
+  const [activeCase, setActiveCase] = useState<"partners" | "personal" | "refinance" | "investment">("partners");
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,6 +84,17 @@ export default function SMSFScenario() {
               data-testid="button-case-refinance"
             >
               Refinancing High-Rate SMSF Loans
+            </Button>
+            <Button
+              onClick={() => setActiveCase("investment")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "investment"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-investment"
+            >
+              SMSF Investment Purchase After Decline
             </Button>
           </div>
         </div>
@@ -822,6 +833,239 @@ export default function SMSFScenario() {
                     </li>
                     <li data-testid="text-outcome-3-5">
                       <span className="font-semibold text-primary">A Long-Term Refinancing Strategy in Place:</span> We set review intervals so the SMSF never drifts into an overpriced loan again.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeCase === "investment" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 4
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  SMSF Investment Purchase Approval After Being Declined Elsewhere
+                </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we helped a client secure SMSF finance using a 40-year loan term and voluntary contributions overlooked by another broker
+                </p>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-4"
+                    >
+                      The Client's Goal & Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-goal-intro-4">
+                    Many SMSF trustees miss out on property opportunities because they're assessed incorrectly or told they don't qualify. In this case, we helped a client secure SMSF lending approval — despite another broker advising them they couldn't borrow the amount they needed.
+                  </p>
+
+                  <div>
+                    <p className="font-semibold text-primary mb-3">The Client's Goal:</p>
+                    <p className="pl-6 mb-3" data-testid="text-goal-description-4">
+                      The client wanted to purchase a residential investment property through their SMSF to diversify their portfolio and strengthen their long-term retirement position.
+                    </p>
+                    <p className="pl-6 mb-3">They had:</p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A well-funded SMSF</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A clear investment objective</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A strong property opportunity</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 font-semibold text-primary">
+                      However, they were told by a previous broker that the SMSF simply could not borrow enough money to complete the purchase.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-primary mb-3">The Challenge:</p>
+                    <p className="pl-6 mb-3">
+                      The other broker evaluated the SMSF under a standard lending model, which resulted in:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Insufficient borrowing capacity</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>No consideration of voluntary contributions</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>No understanding of lenders offering extended 40-year SMSF loan terms</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mb-3">
+                      Without exploring specialised SMSF lenders or factoring in allowable contributions, the previous broker incorrectly concluded the client was ineligible.
+                    </p>
+                    <p className="pl-6 font-semibold text-primary">
+                      The client was close to giving up on the property altogether.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-4"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-4-step-1">
+                    <p className="font-semibold text-primary mb-3">1. A Fresh SMSF Assessment With Specialist Lenders</p>
+                    <p className="pl-6">
+                      We reviewed the SMSF's financials and quickly identified that the previous broker had used restrictive lending assumptions that did not reflect the full range of SMSF lending options available.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-4-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Leveraging a Lender Offering a 40-Year SMSF Loan Term</p>
+                    <p className="pl-6 mb-3">
+                      We sourced a lender offering a 40-year SMSF loan term, which significantly improved:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Borrowing capacity</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Repayment affordability</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Long-term SMSF cash flow</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This alone increased their borrowing power beyond what they were previously told.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-4-step-3">
+                    <p className="font-semibold text-primary mb-3">3. Including Voluntary Contributions the Previous Broker Ignored</p>
+                    <p className="pl-6 mb-3">
+                      We identified that the client made regular voluntary concessional contributions — a critical income source for lending that other brokers often overlook.
+                    </p>
+                    <p className="pl-6">
+                      By correctly including these contributions in the SMSF's servicing assessment, the borrowing capacity increased even further.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-solution-4-step-4">
+                    <p className="font-semibold text-primary mb-3">4. Complete Lending Strategy & Compliance Alignment</p>
+                    <p className="pl-6 mb-3">
+                      We structured a lending plan that:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Met SIS and LRBA compliance requirements</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Aligned with the SMSF's investment strategy</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Ensured sufficient liquidity buffers</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Delivered lender confidence and clarity</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      With the correct structure and lender selection, the application was approved without issue.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-4"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-4-1">
+                      <span className="font-semibold text-primary">Full Loan Approval Despite Prior Decline:</span> The client was approved for the full loan amount — despite being turned away elsewhere.
+                    </li>
+                    <li data-testid="text-outcome-4-2">
+                      <span className="font-semibold text-primary">40-Year Loan Term Maximised Capacity:</span> The extended loan term maximised affordability and borrowing power.
+                    </li>
+                    <li data-testid="text-outcome-4-3">
+                      <span className="font-semibold text-primary">Voluntary Contributions Included:</span> Properly accounting for voluntary contributions dramatically improved servicing.
+                    </li>
+                    <li data-testid="text-outcome-4-4">
+                      <span className="font-semibold text-primary">Successful Property Purchase:</span> The SMSF successfully purchased a high-quality investment property.
+                    </li>
+                    <li data-testid="text-outcome-4-5">
+                      <span className="font-semibold text-primary">Strengthened Retirement Wealth:</span> Long-term retirement wealth strengthened through improved SMSF asset growth.
+                    </li>
+                    <li data-testid="text-outcome-4-6">
+                      <span className="font-semibold text-primary">Repeatable Strategy:</span> A repeatable, scalable SMSF property strategy for future acquisitions.
                     </li>
                   </ul>
                 </div>
