@@ -44,15 +44,11 @@ export default function Team() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   Tony founded Lyte Financial to deliver lending solutions beyond standard banking. His expertise spans business acquisitions, commercial property, residential lending, and SMSF structures. Tony's strategic approach and ability to structure complex, multi-layered finance solutions has helped countless clients achieve their ownership goals.
                 </p>
-                <div className="flex flex-col gap-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="mailto:tony@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">tony@lytefinancial.com.au</a>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="tel:0455381398" className="text-muted-foreground hover:text-primary transition-colors">0455 381 398</a>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 mb-4 text-sm">
+                  <Mail className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="mailto:tony@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">tony@lytefinancial.com.au</a>
+                  <Phone className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="tel:0455381398" className="text-muted-foreground hover:text-primary transition-colors">0455 381 398</a>
                 </div>
                 <div className="text-center">
                   <a 
@@ -89,15 +85,11 @@ export default function Team() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   Mathew brings over 17 years of senior leadership in banking and finance. Having held senior positions at large residential and commercial broking organisations, he provides strategic guidance and deep industry insight. His expertise in lending markets and institutional relationships strengthens Lyte Financial's sophisticated solutions.
                 </p>
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="mailto:mathew@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">mathew@lytefinancial.com.au</a>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="tel:0437591747" className="text-muted-foreground hover:text-primary transition-colors">0437 591 747</a>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-sm">
+                  <Mail className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="mailto:mathew@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">mathew@lytefinancial.com.au</a>
+                  <Phone className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="tel:0437591747" className="text-muted-foreground hover:text-primary transition-colors">0437 591 747</a>
                 </div>
               </div>
             </div>
@@ -120,15 +112,11 @@ export default function Team() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   Jarred ensures every application moves smoothly from consultation to settlement. With exceptional attention to detail, he manages documentation, lender communications, and compliance requirements. His commitment to service excellence delivers a seamless client experience at every stage. He prides himself on being proactive, approachable, and keeping clients informed throughout.
                 </p>
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="mailto:jarred@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">jarred@lytefinancial.com.au</a>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <a href="tel:0290993613" className="text-muted-foreground hover:text-primary transition-colors">(02) 9099 3613</a>
-                  </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-sm">
+                  <Mail className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="mailto:jarred@lytefinancial.com.au" className="text-muted-foreground hover:text-primary transition-colors">jarred@lytefinancial.com.au</a>
+                  <Phone className="h-4 w-4 text-primary mt-0.5" />
+                  <a href="tel:0290993613" className="text-muted-foreground hover:text-primary transition-colors">(02) 9099 3613</a>
                 </div>
               </div>
             </div>
