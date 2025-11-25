@@ -265,13 +265,11 @@ export default function Home() {
                   className="flex-[0_0_100%] min-w-0 pl-4"
                   data-testid={`lending-panel-${panel.id}`}
                 >
-                  <div className="h-[180px] flex items-center justify-center bg-white rounded-lg">
-                    <img
-                      src={panel.image}
-                      alt={`Lending Partners Panel ${panel.id}`}
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
+                  <img
+                    src={panel.image}
+                    alt={`Lending Partners Panel ${panel.id}`}
+                    className="w-full h-auto"
+                  />
                 </div>
               ))}
             </div>
