@@ -843,10 +843,10 @@ export default function SMSFScenario() {
               className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4"
               data-testid="text-process-title"
             >
-              Five-Stage Process Map
+              Six-Stage SMSF Process Map
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-              Our structured approach to SMSF property lending
+              A clear and compliant pathway designed for SMSF property lending
             </p>
           </div>
 
@@ -858,10 +858,10 @@ export default function SMSFScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Assessment & Initial Documentation
+                    Initial SMSF Consultation
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Determine the SMSF's borrowing capacity based on current assets, contributions, and anticipated rental income. Gather essential documents including the SMSF Trust Deed, financial statements, member statements, and trustee identification.
+                    We begin with a detailed discussion to understand your SMSF's objectives, the property you intend to purchase or refinance, and how this aligns with your long-term retirement strategy. During this conversation, we outline key SMSF borrowing rules and compliance considerations so the structure is correct from the very beginning.
                   </p>
                 </div>
               </div>
@@ -877,10 +877,10 @@ export default function SMSFScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Strategy & Structuring
+                    Information Collection & SMSF Compliance Review
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Review available deposits and explore alternative equity options. Assess strategic on-lending opportunities from member funds. Engage accountants and solicitors to establish the correct Bare Trust structure and ensure SMSF Trust Deed permits borrowing.
+                    You'll receive secure access to your Lyte Financial client portal to provide your SMSF trust deed, financials, contribution history, and other supporting documents. We then complete a thorough borrowing and compliance assessment to confirm the SMSF can legally borrow and identify the trust structure required. At this stage, we work closely with your accountant or SMSF administrator, as they are responsible for preparing or verifying the formal SMSF and trust documentation required for lending.
                   </p>
                 </div>
               </div>
@@ -896,10 +896,10 @@ export default function SMSFScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Application Submission
+                    Strategy & Recommendation Meeting
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Select the optimal lender based on property type, loan-to-value ratio, and interest rate requirements. Compile the comprehensive loan application package including all financial, trust, and property documentation for formal submission.
+                    Once our assessment is complete, we present a personalised SMSF lending strategy. This meeting outlines suitable lending options, the correct structure for the Bare Trust or Unit Trust arrangement, and the compliance pathway required for a successful purchase or refinance. It's a collaborative discussion designed to give you full clarity on the process while ensuring your accountant or legal adviser is aligned with the structural requirements.
                   </p>
                 </div>
               </div>
@@ -915,10 +915,10 @@ export default function SMSFScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Execution & Settlement
+                    Structure Setup, Lending Proposal & Application Submission
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Manage the application through to settlement, responding promptly to lender queries. Ensure all Bare Trust Deed and loan agreements comply with SIS legislation. Coordinate with client, solicitor, and lender for smooth settlement and loan drawdown.
+                    You'll receive a detailed lending proposal that outlines the lender, structure, repayments, and expected benefits. While your accountant or solicitor handles the setup or verification of the required entities — such as the Bare Trust/Holding Trust or Unit Trust — we coordinate with them to ensure the structure meets lender policy and SMSF borrowing rules. Once the structure is ready, we prepare and submit your SMSF lending application and manage communication with all parties.
                   </p>
                 </div>
               </div>
@@ -928,16 +928,35 @@ export default function SMSFScenario() {
             </div>
 
             <div className="bg-card p-6 md:p-8 rounded-lg border border-border" data-testid="card-step-5">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 mb-4">
                 <div className="bg-primary text-primary-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold flex-shrink-0">
                   5
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Post-Settlement & Growth Strategy
+                    Loan Approval, Settlement & LRBA Completion
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Conduct post-settlement review to confirm all compliance requirements are met. Provide ongoing strategies for SMSF growth including loan structure reviews, contribution optimization, and property performance assessment.
+                    After approval, we guide you through the remaining requirements and oversee the Limited Recourse Borrowing Arrangement (LRBA) process. We liaise with your accountant, solicitor, the lender, and the property conveyancer to ensure all trust documents, trustee resolutions, and settlement steps are completed correctly. Our goal is to ensure a fully compliant, stress-free settlement so your SMSF can acquire the property confidently.
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center my-2">
+                <ArrowRight className="h-6 w-6 text-primary rotate-90" />
+              </div>
+            </div>
+
+            <div className="bg-card p-6 md:p-8 rounded-lg border border-border" data-testid="card-step-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary text-primary-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold flex-shrink-0">
+                  6
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
+                    Ongoing Support, Reviews & SMSF Strategy Guidance
+                  </h3>
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                    Our support continues beyond settlement. We provide ongoing loan reviews, rate check-ins, leasing guidance for related-party tenants (where applicable), and structural advice as SMSF lending rules evolve. We also continue working alongside your accountant or SMSF administrator to ensure the structure remains compliant, efficient, and aligned with your long-term superannuation strategy.
                   </p>
                 </div>
               </div>
