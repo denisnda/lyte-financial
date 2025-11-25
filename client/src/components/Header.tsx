@@ -175,7 +175,7 @@ export default function Header() {
                 className="bg-primary-foreground text-primary hover-elevate active-elevate-2 text-lg px-6"
                 data-testid="button-contact"
               >
-                Contact
+                Contact Us
               </Button>
             </a>
           </nav>
