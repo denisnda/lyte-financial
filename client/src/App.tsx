@@ -22,6 +22,10 @@ import CommercialProcess from "@/pages/CommercialProcess";
 import SMSFLending from "@/pages/SMSFLending";
 import SMSFProcess from "@/pages/SMSFProcess";
 import BorrowingPowerCalculator from "@/pages/BorrowingPowerCalculator";
+import LoanRepaymentCalculator from "@/pages/LoanRepaymentCalculator";
+import OffsetCalculator from "@/pages/OffsetCalculator";
+import RefinancingCalculator from "@/pages/RefinancingCalculator";
+import StampDutyCalculator from "@/pages/StampDutyCalculator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -40,6 +44,10 @@ function Router() {
       <Route path="/smsf-lending" component={SMSFLending} />
       <Route path="/smsf-process" component={SMSFProcess} />
       <Route path="/calculators/borrowing-power" component={BorrowingPowerCalculator} />
+      <Route path="/calculators/loan-repayment" component={LoanRepaymentCalculator} />
+      <Route path="/calculators/offset" component={OffsetCalculator} />
+      <Route path="/calculators/refinancing" component={RefinancingCalculator} />
+      <Route path="/calculators/stamp-duty" component={StampDutyCalculator} />
       <Route path="/scenarios" component={Scenarios} />
       <Route path="/scenarios/smsf" component={SMSFScenario} />
       <Route path="/scenarios/smsf-residential" component={SMSFResidentialScenario} />
