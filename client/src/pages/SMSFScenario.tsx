@@ -1,11 +1,14 @@
+import { useState } from "react";
 import Header from "@/components/Header";
-import { Target, Lightbulb, MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { Target, Lightbulb, TrendingUp, MapPin, Phone, Mail, Clock, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@assets/image_1764037219843.png";
 import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b16.jpg';
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
 export default function SMSFScenario() {
+  const [activeCase, setActiveCase] = useState<"partners" | "personal">("partners");
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -25,103 +28,347 @@ export default function SMSFScenario() {
               className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white"
               data-testid="text-hero-title"
             >
-              Case Study: The Smart Structure for Business Partners & SMSF Property
+              SMSF Lending Case Studies
             </h1>
             <p 
               className="text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto text-white"
               data-testid="text-hero-description"
             >
-              Using your super to invest in property is a powerful wealth-building strategy, but it can be complex, especially for partners. This case study illustrates how we helped two business partners use their separate super funds to acquire their new business premises together.
+              Using your super to invest in property is a powerful wealth-building strategy, but it requires expert guidance. Explore our case studies to see how we've helped clients navigate complex SMSF lending scenarios.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-accent">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
-            <div className="flex items-start gap-6 mb-6">
-              <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <Target className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-goal-title"
-                >
-                  The Client's Goal
-                </h2>
-              </div>
-            </div>
-            
-            <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
-              <p data-testid="text-goal-description-1">
-                Two business partners, who run a highly successful company, identified an ideal commercial property to purchase and operate their business from.
-              </p>
-              
-              <p data-testid="text-goal-description-2">
-                Their primary goal was not to use their personal or business cash flow for the purchase. Instead, they wanted to leverage their individual Self-Managed Super Funds (SMSFs) to acquire the asset. This presented a significant structural challenge: how can two separate SMSFs legally and effectively co-purchase a single property?
-              </p>
-            </div>
+      <section className="py-8 md:py-12 bg-background border-b border-border">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-6">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
+              Select a Case Study
+            </h2>
+            <p className="text-muted-foreground">
+              Choose a scenario to learn more about our SMSF lending solutions
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={() => setActiveCase("partners")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "partners"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-partners"
+            >
+              Business Partners & Unit Trust
+            </Button>
+            <Button
+              onClick={() => setActiveCase("personal")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "personal"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-personal"
+            >
+              Personal Funds to SMSF Loan
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${constructionImage})` }}
-        />
-        <div className="absolute inset-0 bg-background/90" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
-          <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
-            <div className="flex items-start gap-6 mb-6">
-              <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <Lightbulb className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-solution-title"
-                >
-                  Our Strategic Solution
+      {activeCase === "partners" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 1
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary">
+                  The Smart Structure for Business Partners & SMSF Property
                 </h2>
               </div>
-            </div>
-            
-            <div className="space-y-6 text-primary text-base md:text-lg leading-relaxed">
-              <p data-testid="text-solution-intro">
-                Our expertise was in guiding the clients on the right structure before the finance was even discussed. We collaborated closely with their accountant to develop a solution.
-              </p>
               
-              <p className="font-semibold text-primary" data-testid="text-solution-answer">
-                The answer was a Unit Trust. This is how we implemented it:
-              </p>
-              
-              <ul className="space-y-4 pl-6">
-                <li className="flex gap-3" data-testid="text-solution-step-1">
-                  <span className="text-primary font-bold flex-shrink-0">•</span>
-                  <span><strong className="text-primary">Establishment of a Unit Trust:</strong> A new Unit Trust was established specifically for the purpose of holding the asset.</span>
-                </li>
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-1"
+                    >
+                      The Client's Goal
+                    </h3>
+                  </div>
+                </div>
                 
-                <li className="flex gap-3" data-testid="text-solution-step-2">
-                  <span className="text-primary font-bold flex-shrink-0">•</span>
-                  <span><strong className="text-primary">SMSF Investment:</strong> The two business partners' individual SMSFs each invested in the trust, acquiring an equal share of the units.</span>
-                </li>
-                
-                <li className="flex gap-3" data-testid="text-solution-step-3">
-                  <span className="text-primary font-bold flex-shrink-0">•</span>
-                  <span><strong className="text-primary">The Purchase:</strong> This Unit Trust (now funded by the two SMSFs) became the legal purchasing entity that acquired the new commercial property.</span>
-                </li>
-              </ul>
-              
-              <p className="pt-4" data-testid="text-solution-conclusion">
-                With this compliant and clear structure in place, we were able to facilitate the lending required for the Unit Trust to complete the transaction.
-              </p>
+                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-goal-description-1">
+                    Two business partners, who run a highly successful company, identified an ideal commercial property to purchase and operate their business from.
+                  </p>
+                  
+                  <p data-testid="text-goal-description-2">
+                    Their primary goal was not to use their personal or business cash flow for the purchase. Instead, they wanted to leverage their individual Self-Managed Super Funds (SMSFs) to acquire the asset. This presented a significant structural challenge: how can two separate SMSFs legally and effectively co-purchase a single property?
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-1"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-primary text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-solution-intro-1">
+                    Our expertise was in guiding the clients on the right structure before the finance was even discussed. We collaborated closely with their accountant to develop a solution.
+                  </p>
+                  
+                  <p className="font-semibold text-primary" data-testid="text-solution-answer-1">
+                    The answer was a Unit Trust. This is how we implemented it:
+                  </p>
+                  
+                  <ul className="space-y-4 pl-6">
+                    <li className="flex gap-3" data-testid="text-solution-step-1-1">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span><strong className="text-primary">Establishment of a Unit Trust:</strong> A new Unit Trust was established specifically for the purpose of holding the asset.</span>
+                    </li>
+                    
+                    <li className="flex gap-3" data-testid="text-solution-step-1-2">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span><strong className="text-primary">SMSF Investment:</strong> The two business partners' individual SMSFs each invested in the trust, acquiring an equal share of the units.</span>
+                    </li>
+                    
+                    <li className="flex gap-3" data-testid="text-solution-step-1-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span><strong className="text-primary">The Purchase:</strong> This Unit Trust (now funded by the two SMSFs) became the legal purchasing entity that acquired the new commercial property.</span>
+                    </li>
+                  </ul>
+                  
+                  <p className="pt-4" data-testid="text-solution-conclusion-1">
+                    With this compliant and clear structure in place, we were able to facilitate the lending required for the Unit Trust to complete the transaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeCase === "personal" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 2
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary">
+                  Structuring an SMSF Loan from Personal Funds
+                </h2>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border mb-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-2"
+                    >
+                      The Client's Goal
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-goal-description-2-1">
+                    The Client wanted to purchase an investment property through their Self-Managed Super Fund (SMSF) as part of a long-term wealth-building strategy.
+                  </p>
+                  
+                  <p data-testid="text-goal-description-2-2">
+                    A pre-approval for an SMSF loan had already been secured under their PAYG income, and the Client was ready to proceed with the purchase.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-destructive/10 p-4 rounded-full flex-shrink-0">
+                    <AlertTriangle className="h-8 w-8 text-destructive" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-challenge-title"
+                    >
+                      The Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-challenge-1">
+                    During the transaction, the Client transitioned from PAYG employment to self-employment.
+                  </p>
+                  
+                  <p className="font-semibold" data-testid="text-challenge-2">
+                    This created an immediate problem:
+                  </p>
+                  
+                  <ul className="space-y-3 pl-6">
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>Lenders generally require two years of financials for self-employed borrowers, even for SMSF loans.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>As a result, the lender cancelled the pre-approval, midway through the purchasing process.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">•</span>
+                      <span>Although the SMSF held some cash, it did not have enough to complete the full purchase price on its own.</span>
+                    </li>
+                  </ul>
+                  
+                  <p className="font-semibold text-destructive" data-testid="text-challenge-3">
+                    Without a solution, the Client risked losing the investment opportunity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-2"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-primary text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-2-step-1">
+                    <p className="font-semibold text-primary mb-3">1. Personal Loan to the SMSF to Complete the Purchase</p>
+                    <p className="pl-6">
+                      We structured a compliant related-party loan, allowing the Client to lend money from their personal funds to the SMSF so it could complete the purchase in cash.
+                    </p>
+                    <p className="pl-6 mt-2">
+                      This preserved the transaction and met all SMSF regulatory obligations.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-2-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Refinancing the SMSF Property After 12 Months</p>
+                    <p className="pl-6 mb-2">
+                      Once the Client had sufficient trading history as a self-employed individual, we:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Re-engaged SMSF lenders</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Secured a standard SMSF property loan</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Rolled the related-party loan into the new SMSF loan</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This returned the Client's personal funds while keeping the structure fully compliant.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-2"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="font-medium text-primary" data-testid="text-outcome-intro-2">
+                    A well-structured SMSF acquisition with full compliance and long-term benefits:
+                  </p>
+                  
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-2-1">
+                      <span className="font-semibold text-primary">Successful Property Acquisition:</span> The SMSF completed the purchase on time, despite the cancelled pre-approval.
+                    </li>
+                    <li data-testid="text-outcome-2-2">
+                      <span className="font-semibold text-primary">Personal Funds Returned:</span> The refinance allowed the Client to recover the full amount initially lent to the SMSF.
+                    </li>
+                    <li data-testid="text-outcome-2-3">
+                      <span className="font-semibold text-primary">Compliance Assurance:</span> The related-party loan, SMSF transaction, and subsequent refinance were all fully compliant, properly documented, and audit-approved, ensuring the integrity of the SMSF and meeting all regulatory requirements.
+                    </li>
+                    <li data-testid="text-outcome-2-4">
+                      <span className="font-semibold text-primary">Long-Term SMSF Benefits:</span> The property is now held under the SMSF with a bank loan, providing tax efficiency and long-term asset growth.
+                    </li>
+                    <li data-testid="text-outcome-2-5">
+                      <span className="font-semibold text-primary">Strategic Flexibility Maintained:</span> The Client continued their transition into self-employment without sacrificing investment momentum.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <section className="relative py-16 md:py-24 overflow-hidden">
         <div 
@@ -312,7 +559,7 @@ export default function SMSFScenario() {
                 >
                   <Button 
                     className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                    data-testid="button-book-meeting"
+                    data-testid="button-book-meeting-footer"
                   >
                     Book A Meeting
                   </Button>
