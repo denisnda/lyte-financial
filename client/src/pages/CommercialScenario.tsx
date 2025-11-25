@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { Target, Lightbulb, ArrowRight } from "lucide-react";
+import { Target, Lightbulb, TrendingUp, ArrowRight } from "lucide-react";
 import heroImage from "@assets/generated_images/Industrial_shed_warehouse_building_df010581.png";
 
 export default function CommercialScenario() {
@@ -23,13 +23,13 @@ export default function CommercialScenario() {
               style={{ textShadow: 'none' }}
               data-testid="text-hero-title"
             >
-              Case Study: The Smart Structure for Business Partners & SMSF Property
+              90% LVR Commercial Property Finance: Securing an Own-Occupied Premises While Retaining Working Capital
             </h1>
             <p 
               className="text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto text-white"
               data-testid="text-hero-description"
             >
-              Using your super to invest in property is a powerful wealth-building strategy, but it can be complex, especially for partners. This case study illustrates how we helped two business partners use their separate super funds to acquire their new business premises together.
+              How we helped a business owner purchase their own commercial property with minimal deposit while preserving vital cash flow
             </p>
           </div>
         </div>
@@ -45,21 +45,34 @@ export default function CommercialScenario() {
               <div>
                 <h2 
                   className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-goal-title"
+                  data-testid="text-challenge-title"
                 >
-                  The Client's Goal
+                  The Client's Goal & Challenge
                 </h2>
               </div>
             </div>
             
-            <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <p data-testid="text-goal-description-1">
-                Two business partners, who run a highly successful company, identified an ideal commercial property to purchase and operate their business from.
-              </p>
+            <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+              <div data-testid="text-client-status">
+                <p className="font-semibold text-primary mb-2">Client Status:</p>
+                <p className="pl-6">
+                  A business owner operating out of a rented factory, currently paying $129,000 per annum in rent.
+                </p>
+              </div>
               
-              <p data-testid="text-goal-description-2">
-                Their primary goal was not to use their personal or business cash flow for the purchase. Instead, they wanted to leverage their individual Self-Managed Super Funds (SMSFs) to acquire the asset. This presented a significant structural challenge: how can two separate SMSFs legally and effectively co-purchase a single property?
-              </p>
+              <div data-testid="text-goal">
+                <p className="font-semibold text-primary mb-2">The Goal:</p>
+                <p className="pl-6">
+                  To purchase a new, own-occupied commercial property to secure premises and build equity. The aim was to move from being a renter to an owner/landlord of his own business premises.
+                </p>
+              </div>
+              
+              <div data-testid="text-challenge">
+                <p className="font-semibold text-primary mb-2">The Challenge:</p>
+                <p className="pl-6">
+                  Limited cash deposit available due to critical working capital requirements within the existing business. The client needed a high Loan-to-Value Ratio (LVR), which is typically difficult to secure for commercial property purchases.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -83,34 +96,38 @@ export default function CommercialScenario() {
             </div>
             
             <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <p data-testid="text-solution-intro">
-                Our expertise was in guiding the clients on the right structure before the finance was even discussed. We collaborated closely with their accountant to develop a solution.
-              </p>
-              
-              <div data-testid="text-solution-answer">
-                <p className="font-semibold text-primary mb-3">The Answer: A Unit Trust</p>
-                <p className="pl-6 mb-4">
-                  This is how we implemented it:
+              <div data-testid="text-market-review">
+                <p className="font-semibold text-primary mb-2">Market Review:</p>
+                <p className="pl-6">
+                  We conducted an extensive review of the commercial lending market to identify lenders with appetite for higher LVR commercial deals.
                 </p>
-                <ul className="pl-6 space-y-3">
-                  <li className="flex items-start gap-2">
-                    <span className="font-semibold text-primary">Establishment of a Unit Trust:</span>
-                    <span>A new Unit Trust was established specifically for the purpose of holding the asset.</span>
+              </div>
+              
+              <div data-testid="text-key-win">
+                <p className="font-semibold text-primary mb-2">The Key Win:</p>
+                <p className="pl-6">
+                  We were able to source a specialist commercial lender willing to approve a 90% Loan-to-Value Ratio (LVR) for the property purchase - a significant achievement in the commercial lending space.
+                </p>
+              </div>
+              
+              <div data-testid="text-rate-structure">
+                <p className="font-semibold text-primary mb-2">Rate Structure:</p>
+                <p className="pl-6">
+                  The interest rate was within the same range as standard commercial lending, with only a small, manageable premium paid for the higher LVR.
+                </p>
+              </div>
+              
+              <div data-testid="text-structure">
+                <p className="font-semibold text-primary mb-2">The Structure:</p>
+                <ul className="pl-6 space-y-3 mt-2">
+                  <li>
+                    <span className="font-semibold text-primary">Establishment of a New SPV:</span> A new Special Purpose Vehicle (Company) was set up specifically to purchase and hold the commercial property.
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="font-semibold text-primary">SMSF Investment:</span>
-                    <span>The two business partners' individual SMSFs each invested in the trust, acquiring an equal share of the units.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="font-semibold text-primary">The Purchase:</span>
-                    <span>This Unit Trust (now funded by the two SMSFs) became the legal purchasing entity that acquired the new commercial property.</span>
+                  <li>
+                    <span className="font-semibold text-primary">Leaseback Arrangement:</span> The client's existing business was then able to lease the property back from the new SPV and pay rent to its own company.
                   </li>
                 </ul>
               </div>
-              
-              <p data-testid="text-solution-outcome">
-                With this compliant and clear structure in place, we were able to facilitate the lending required for the Unit Trust to complete the transaction.
-              </p>
             </div>
           </div>
         </div>
@@ -121,32 +138,35 @@ export default function CommercialScenario() {
           <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
             <div className="flex items-start gap-6 mb-6">
               <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <Target className="h-8 w-8 text-primary" />
+                <TrendingUp className="h-8 w-8 text-primary" />
               </div>
               <div>
                 <h2 
                   className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
                   data-testid="text-outcome-title"
                 >
-                  The Tangible Outcome
+                  The Positive Outcome
                 </h2>
               </div>
             </div>
             
             <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <p data-testid="text-outcome-intro">
-                This strategy successfully aligned the partners' business and personal wealth goals:
+              <p className="font-medium text-primary" data-testid="text-outcome-intro">
+                A strategic win that delivered long-term stability and cash flow control:
               </p>
               
-              <ul className="space-y-3 pl-6">
+              <ul className="space-y-4 pl-6">
                 <li data-testid="text-outcome-1">
-                  <span className="font-semibold text-primary">Super-Funded Acquisition:</span> The partners successfully used their superannuation funds to purchase their business premises, a move that would have been blocked without the correct structure.
+                  <span className="font-semibold text-primary">Property Acquisition:</span> The client successfully purchased his new own-occupied commercial property.
                 </li>
                 <li data-testid="text-outcome-2">
-                  <span className="font-semibold text-primary">Long-Term Business Stability:</span> Their operating business is now secure in its own premises, insulating it from rent increases and providing a stable platform for the future.
+                  <span className="font-semibold text-primary">Cash Flow Retention:</span> The high-LVR finance strategy allowed the client to retain the vital cash flow (working capital) needed for daily business operations and growth.
                 </li>
                 <li data-testid="text-outcome-3">
-                  <span className="font-semibold text-primary">A Valuable Growth Asset:</span> Both partners' SMSFs now hold a significant and valuable commercial property, diversifying their retirement savings and positioning them for long-term capital growth.
+                  <span className="font-semibold text-primary">Future Foundation:</span> The client is now building equity in an asset, has stabilized his premises costs, and has a foundation for his next stage of growth.
+                </li>
+                <li data-testid="text-outcome-4">
+                  <span className="font-semibold text-primary">Ongoing Partnership:</span> We continue to assist the client by mapping out his future finance requirements as the business grows.
                 </li>
               </ul>
             </div>
@@ -164,7 +184,7 @@ export default function CommercialScenario() {
               Five-Stage Process Map
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-              Our structured approach to commercial property and SMSF lending
+              Our structured approach to high-LVR commercial property finance
             </p>
           </div>
 
@@ -176,10 +196,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Initial Consultation & Structure Analysis
+                    Initial Consultation & Needs Analysis
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Comprehensive assessment of the clients' business structure, SMSF positions, and property acquisition goals. Identification of potential structural challenges and collaboration with accountants and legal advisors to determine the optimal ownership structure.
+                    Comprehensive assessment of the client's current situation including rental costs, business cash flow requirements, and property goals. Understanding the critical need to preserve working capital while achieving property ownership.
                   </p>
                 </div>
               </div>
@@ -195,10 +215,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Unit Trust Establishment & SMSF Compliance
+                    Market Research & Lender Identification
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Coordination with legal professionals to establish the Unit Trust structure. Ensuring each SMSF's investment in the trust complies with superannuation regulations and that the trust deed allows for the intended property purchase and lease arrangements.
+                    Extensive review of the commercial lending market to identify specialist lenders with appetite for higher LVR deals. Analysis of rate structures, terms, and conditions to find the optimal solution that balances LVR requirements with competitive pricing.
                   </p>
                 </div>
               </div>
@@ -214,10 +234,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Finance Strategy & Lender Selection
+                    Structure Design & SPV Establishment
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Development of the financing strategy for the Unit Trust. Identification of lenders experienced with SMSF and Unit Trust structures, preparing a comprehensive application that demonstrates the viability of the purchase and the strength of the business tenancy.
+                    Development of the optimal ownership structure including establishment of a Special Purpose Vehicle (SPV) company to hold the property. Coordination with accountants and legal advisors to ensure the structure supports both the finance requirements and future business goals.
                   </p>
                 </div>
               </div>
@@ -233,10 +253,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Application Processing & Approval
+                    Application & Approval Management
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Submission and management of the loan application through to approval. Coordination of property valuations, satisfaction of lender conditions, and ensuring all SMSF compliance documentation is in order for the transaction.
+                    Preparation and submission of the finance application to the specialist lender. Management of the approval process including property valuations, business financials review, and satisfaction of all lender conditions for the 90% LVR facility.
                   </p>
                 </div>
               </div>
@@ -252,10 +272,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Settlement & Lease Execution
+                    Settlement & Leaseback Execution
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Finalisation of settlement with all parties including solicitors, lenders, and SMSF administrators. Execution of the commercial lease between the Unit Trust (as landlord) and the operating business (as tenant) at market rates, completing the structure and enabling ongoing compliance.
+                    Finalisation of settlement coordinating with solicitors, lenders, and all parties. Execution of the leaseback arrangement between the new SPV (as landlord) and the operating business (as tenant), ensuring ongoing compliance and establishing the foundation for future growth planning.
                   </p>
                 </div>
               </div>
