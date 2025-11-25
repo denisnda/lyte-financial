@@ -502,10 +502,10 @@ export default function CommercialScenario() {
               className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4"
               data-testid="text-process-title"
             >
-              Five-Stage Process Map
+              Six-Stage Commercial Lending Process Map
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-              Our structured approach to commercial property finance
+              Our structured approach to commercial property and business finance
             </p>
           </div>
 
@@ -520,7 +520,7 @@ export default function CommercialScenario() {
                     Initial Consultation & Needs Analysis
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Comprehensive assessment of the client's current situation including business cash flow requirements and property or refinance goals. Understanding the critical needs and timing constraints.
+                    We begin with an in-depth discussion to understand your commercial goals, the purpose of the property purchase or refinance, and the broader financial requirements of your business. This includes reviewing current rental commitments, cash flow needs, business performance, and long-term operational plans. This stage ensures we clearly understand both your immediate objectives and the strategic drivers behind the transaction.
                   </p>
                 </div>
               </div>
@@ -536,10 +536,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Market Research & Lender Identification
+                    Information Collection & Preliminary Assessment
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Extensive review of the commercial lending market to identify specialist lenders suited to your specific needs. Analysis of rate structures, terms, conditions, and documentation requirements.
+                    You'll receive access to the Lyte Financial client portal to upload key documents such as business loan statements, financials, and property details. We assess borrowing capacity, analyse trading performance, evaluate security positions, and determine lender appetite for the scenario. This step allows us to identify opportunities, constraints, and structural requirements early in the process.
                   </p>
                 </div>
               </div>
@@ -555,10 +555,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Structure Design & Documentation
+                    Strategy & Recommendation Session
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Development of the optimal structure and preparation of required documentation. Coordination with accountants and legal advisors to ensure the structure supports both the finance requirements and future business goals.
+                    Once our analysis is complete, we meet to present a tailored commercial lending strategy. During this session, we walk you through lender options, discuss structure pathways such as SPVs or trust entities, outline potential high-LVR solutions, and compare the impact of each scenario on cash flow and future growth. This collaborative session ensures full clarity and alignment before moving forward.
                   </p>
                 </div>
               </div>
@@ -574,10 +574,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Application & Approval Management
+                    Structure Design & Application Submission
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Preparation and submission of the finance application to the specialist lender. Management of the approval process including valuations, financials review, and satisfaction of all lender conditions.
+                    We finalise the ownership and borrowing structure — whether through a newly created SPV, an existing entity, or a trust arrangement — ensuring it aligns with your commercial objectives and lender policy. We then prepare and submit the commercial lending application, managing communication with lenders, accountants, solicitors, and valuers to ensure the submission is complete, accurate, and positioned for approval.
                   </p>
                 </div>
               </div>
@@ -587,16 +587,35 @@ export default function CommercialScenario() {
             </div>
 
             <div className="bg-card p-6 md:p-8 rounded-lg border border-border" data-testid="card-step-5">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 mb-4">
                 <div className="bg-primary text-primary-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold flex-shrink-0">
                   5
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Settlement & Ongoing Support
+                    Approval, Settlement & Leaseback Execution
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Finalisation of settlement coordinating with solicitors, lenders, and all parties. Ongoing support and forward-planning to ensure your finance strategy evolves with the growth of your business.
+                    Following approval, we manage all outstanding requirements and coordinate directly with lenders, legal advisers, and relevant stakeholders to finalise the transaction. This includes overseeing valuations, completing entity documentation, and executing any required leaseback arrangements between the trading business and the SPV or property-holding entity. Our goal is a seamless, compliant settlement that supports both business operations and long-term property strategy.
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center my-2">
+                <ArrowRight className="h-6 w-6 text-primary rotate-90" />
+              </div>
+            </div>
+
+            <div className="bg-card p-6 md:p-8 rounded-lg border border-border" data-testid="card-step-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary text-primary-foreground rounded-full h-10 w-10 flex items-center justify-center font-bold flex-shrink-0">
+                  6
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
+                    Ongoing Support, Reviews & Strategic Guidance
+                  </h3>
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                    Our partnership continues well beyond settlement. We provide ongoing rate reviews, facility assessments, structural optimisation, and strategic guidance as your business evolves. Whether planning expansion, future property acquisitions, refinancing, or restructuring of existing facilities, we ensure your commercial finance continues to support your growth, cash flow, and long-term business objectives.
                   </p>
                 </div>
               </div>
