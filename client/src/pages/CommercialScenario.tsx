@@ -346,8 +346,8 @@ export default function CommercialScenario() {
               <div className="flex items-start gap-2">
                 <Clock className="h-4 w-4 flex-shrink-0 mt-0.5" />
                 <div className="text-center md:text-left">
-                  <p><span className="text-primary-foreground/80">Mon - Fri:</span> 8:00 AM - 5:00 PM</p>
-                  <p><span className="text-primary-foreground/80">Sat:</span> 8:00 AM - 8:00 PM</p>
+                  <p><span className="text-primary-foreground/80">Mon - Fri:</span> 8:00 AM - 6:00 PM</p>
+                  <p><span className="text-primary-foreground/80">Sat:</span> 8:00 AM - 11:00 AM</p>
                   <p><span className="text-primary-foreground/80">Sun:</span> Closed</p>
                 </div>
               </div>
