@@ -1,176 +1,243 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Building2, Check } from "lucide-react";
-import { useLocation } from "wouter";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { SiLinkedin } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
-
-const lendingOptions = [
-  "I need lending to buy a new business",
-  "I need lending to buy an additional business",
-  "I want to purchase an owner occupied commercial property for my business",
-  "I need working capital or asset finance for new vehicles or equipment"
-];
+import { apiRequest } from "@/lib/queryClient";
+import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
+import Header from "@/components/Header";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
 export default function Contact() {
-  const [, setLocation] = useLocation();
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    lendingType: ""
+  
+  const form = useForm<InsertContactInquiry>({
+    resolver: zodResolver(insertContactInquirySchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.phone || !formData.email || !formData.lendingType) {
+  const mutation = useMutation({
+    mutationFn: async (data: InsertContactInquiry) => {
+      const response = await apiRequest("POST", "/api/contact", data);
+      return response.json();
+    },
+    onSuccess: () => {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all fields and select a lending option.",
-        variant: "destructive"
+        title: "Message Sent",
+        description: "Thank you for your inquiry. We will be in touch shortly.",
       });
-      return;
-    }
+      form.reset();
+    },
+    onError: () => {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
 
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Thank You!",
-      description: "We've received your inquiry and will be in touch soon.",
-    });
-
-    setTimeout(() => {
-      setLocation('/');
-    }, 2000);
+  const onSubmit = (data: InsertContactInquiry) => {
+    mutation.mutate(data);
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="bg-primary text-primary-foreground">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
+
+      <main className="flex-1 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between h-16">
-            <button 
-              onClick={() => setLocation('/')}
-              className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-md"
-              data-testid="button-back-home"
-            >
-              <Building2 className="h-8 w-8" />
-              <span className="font-serif text-xl font-semibold">LYTE FINANCIAL</span>
-            </button>
-          </div>
-        </div>
-      </header>
+          <h1 
+            className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-16"
+            data-testid="text-contact-title"
+          >
+            Contact our Team
+          </h1>
 
-      <main className="py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4" data-testid="text-contact-title">
-              Start Your Funding Journey
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              Tell us about your lending needs and we'll get in touch
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <h2 className="font-serif text-2xl md:text-3xl text-primary mb-8">
+                Contact Us
+              </h2>
 
-          <Card className="p-8 md:p-10">
-            <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-6">
-                <div>
-                  <Label htmlFor="name" className="text-base font-medium mb-2 block">
-                    Name *
-                  </Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Your full name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="text-base"
-                    data-testid="input-name"
-                  />
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-foreground">526/368 Sussex St.</p>
+                    <p className="text-foreground">Sydney, NSW 2000</p>
+                  </div>
                 </div>
 
-                <div>
-                  <Label htmlFor="phone" className="text-base font-medium mb-2 block">
-                    Phone Number *
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="Your phone number"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="text-base"
-                    data-testid="input-phone"
-                  />
+                <div className="flex items-center gap-4">
+                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                  <a 
+                    href="tel:0290993613" 
+                    className="text-foreground hover:text-primary transition-colors"
+                    data-testid="link-phone"
+                  >
+                    0290 993 613
+                  </a>
                 </div>
 
-                <div>
-                  <Label htmlFor="email" className="text-base font-medium mb-2 block">
-                    Email *
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="text-base"
-                    data-testid="input-email"
-                  />
+                <div className="flex items-center gap-4">
+                  <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                  <a 
+                    href="mailto:ask@lytefinancial.com.au" 
+                    className="text-foreground hover:text-primary transition-colors"
+                    data-testid="link-email"
+                  >
+                    ask@lytefinancial.com.au
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-foreground">
+                      <span className="font-semibold">Mon - Fri:</span> 8:00 AM - 6:00 PM
+                    </p>
+                    <p className="text-foreground">
+                      <span className="font-semibold">Sat:</span> 8:00 AM - 11:00 AM
+                    </p>
+                    <p className="text-foreground">
+                      <span className="font-semibold">Sun:</span> Closed
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <a
+                    href="https://www.linkedin.com/company/lytefinancial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                    data-testid="link-linkedin"
+                  >
+                    <SiLinkedin className="h-6 w-6" />
+                  </a>
                 </div>
               </div>
+            </div>
 
-              <div>
-                <Label className="text-base font-medium mb-4 block">
-                  What type of lending do you need? *
-                </Label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {lendingOptions.map((option, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, lendingType: option })}
-                      className={`p-4 rounded-md border-2 text-left transition-all hover-elevate active-elevate-2 ${
-                        formData.lendingType === option
-                          ? 'border-primary bg-primary/5'
-                          : 'border-border bg-card'
-                      }`}
-                      data-testid={`button-option-${index + 1}`}
+            <div>
+              <Card className="p-6 md:p-8 bg-white border-border">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground">
+                            Name <span className="text-destructive">*</span>
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              {...field}
+                              className="bg-background border-border"
+                              data-testid="input-name"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground">
+                              Email <span className="text-destructive">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                {...field}
+                                className="bg-background border-border"
+                                data-testid="input-email"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground">
+                              Phone <span className="text-destructive">*</span>
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                type="tel"
+                                {...field}
+                                className="bg-background border-border"
+                                data-testid="input-phone"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground">Message</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              {...field}
+                              rows={5}
+                              className="bg-background border-border resize-none"
+                              data-testid="input-message"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full bg-accent text-accent-foreground hover-elevate active-elevate-2"
+                      disabled={mutation.isPending}
+                      data-testid="button-submit"
                     >
-                      <div className="flex items-start gap-3">
-                        <div className={`flex-shrink-0 mt-0.5 h-5 w-5 rounded-sm border-2 flex items-center justify-center ${
-                          formData.lendingType === option
-                            ? 'border-primary bg-primary'
-                            : 'border-muted-foreground/30'
-                        }`}>
-                          {formData.lendingType === option && (
-                            <Check className="h-3 w-3 text-primary-foreground" />
-                          )}
-                        </div>
-                        <span className="text-sm md:text-base font-medium leading-snug">
-                          {option}
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full text-base"
-                data-testid="button-submit"
-              >
-                Submit
-              </Button>
-            </form>
-          </Card>
+                      {mutation.isPending ? "Sending..." : "Submit"}
+                    </Button>
+                  </form>
+                </Form>
+              </Card>
+            </div>
+          </div>
         </div>
       </main>
     </div>

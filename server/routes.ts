@@ -19,10 +19,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Log the inquiry for now - email integration can be added later
       console.log("New contact inquiry received:", {
-        name: `${inquiry.firstName} ${inquiry.lastName}`,
+        name: inquiry.name,
         email: inquiry.email,
         phone: inquiry.phone,
-        lendingType: inquiry.lendingType,
+        message: inquiry.message,
         timestamp: inquiry.createdAt
       });
 

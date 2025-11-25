@@ -19,11 +19,10 @@ export type User = typeof users.$inferSelect;
 
 export const contactInquiries = pgTable("contact_inquiries", {
   id: serial("id").primaryKey(),
-  firstName: text("first_name").notNull(),
-  lastName: text("last_name").notNull(),
+  name: text("name").notNull(),
   phone: text("phone").notNull(),
   email: text("email").notNull(),
-  lendingType: text("lending_type").notNull(),
+  message: text("message"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
@@ -31,22 +30,11 @@ export const insertContactInquirySchema = createInsertSchema(contactInquiries).o
   id: true,
   createdAt: true,
 }).extend({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
+  name: z.string().min(1, "Name is required"),
   phone: z.string().min(1, "Phone number is required"),
   email: z.string().email("Please enter a valid email address"),
-  lendingType: z.string().min(1, "Please select a lending type"),
+  message: z.string().optional(),
 });
 
 export type InsertContactInquiry = z.infer<typeof insertContactInquirySchema>;
 export type ContactInquiry = typeof contactInquiries.$inferSelect;
-
-export const lendingTypes = [
-  "Business Funding",
-  "Residential Funding",
-  "Commercial Property Funding",
-  "SMSF Funding Residential Property",
-  "SMSF Funding Commercial Property",
-  "Asset and Equipment Finance",
-  "More than one of the above types",
-] as const;
