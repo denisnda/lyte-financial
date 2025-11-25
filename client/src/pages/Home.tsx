@@ -328,15 +328,31 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3">
-                <Button 
-                  variant="outline"
-                  className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                  onClick={() => setLocation('/contact')}
-                  data-testid="button-schedule-meeting"
-                >
-                  Schedule a Meeting
-                </Button>
+              <div className="flex flex-col gap-4">
+                <p className="font-semibold text-lg">Supporting Clients Australia Wide</p>
+                <div className="flex flex-col gap-3">
+                  <Button 
+                    variant="outline"
+                    className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                    onClick={() => setLocation('/contact')}
+                    data-testid="button-enquire-now"
+                  >
+                    Enquire Now
+                  </Button>
+                  <a 
+                    href="https://calendly.com/tony-lytefinancial/30min?month=2025-11" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      variant="outline"
+                      className="w-full border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                      data-testid="button-book-meeting"
+                    >
+                      Book A Meeting
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
 
