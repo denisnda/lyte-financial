@@ -165,16 +165,16 @@ export default function CommercialScenario() {
               
               <ul className="space-y-4 pl-6">
                 <li data-testid="text-outcome-1">
-                  <span className="font-semibold text-primary">Property Acquisition:</span> The client successfully purchased his new own-occupied commercial property.
+                  <span className="font-semibold text-primary">Property Acquisition:</span> The client successfully acquired an owner-occupied commercial property, transitioning from renting to ownership.
                 </li>
                 <li data-testid="text-outcome-2">
-                  <span className="font-semibold text-primary">Cash Flow Retention:</span> The high-LVR finance strategy allowed the client to retain the vital cash flow (working capital) needed for daily business operations and growth.
+                  <span className="font-semibold text-primary">Cash Flow Retention:</span> With the 90% LVR structure, the business retained essential cash flow to sustain daily operations and support growth.
                 </li>
                 <li data-testid="text-outcome-3">
                   <span className="font-semibold text-primary">Future Foundation:</span> The client is now building equity in an asset, has stabilized his premises costs, and has a foundation for his next stage of growth.
                 </li>
                 <li data-testid="text-outcome-4">
-                  <span className="font-semibold text-primary">Ongoing Partnership:</span> We continue to assist the client by mapping out his future finance requirements as the business grows.
+                  <span className="font-semibold text-primary">Ongoing Partnership:</span> We continue to support the client with forward-planning, ensuring their finance strategy evolves with the growth of their business.
                 </li>
               </ul>
             </div>
