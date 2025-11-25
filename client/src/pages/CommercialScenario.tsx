@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import { Target, Lightbulb, TrendingUp, ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,8 @@ import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b1
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
 export default function CommercialScenario() {
+  const [activeCase, setActiveCase] = useState<"highLVR" | "rapidRefinance">("highLVR");
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -26,161 +29,466 @@ export default function CommercialScenario() {
               style={{ textShadow: 'none' }}
               data-testid="text-hero-title"
             >
-              90% LVR Commercial Property Finance: Securing an Own-Occupied Premises While Retaining Working Capital
+              Commercial Lending Case Studies
             </h1>
             <p 
               className="text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto text-white"
               data-testid="text-hero-description"
             >
-              How we helped a business owner purchase their own commercial property with minimal deposit while preserving vital cash flow
+              Commercial property finance requires specialist knowledge and access to the right lenders. Explore our case studies to see how we've helped businesses secure commercial property solutions.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-accent">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
-            <div className="flex items-start gap-6 mb-6">
-              <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <Target className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-challenge-title"
-                >
-                  The Client's Goal & Challenge
-                </h2>
-              </div>
-            </div>
-            
-            <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <div data-testid="text-client-status">
-                <p className="font-semibold text-primary mb-2">Client Status:</p>
-                <p className="pl-6">
-                  A business owner operating out of a rented factory, currently paying $129,000 per annum in rent.
-                </p>
-              </div>
-              
-              <div data-testid="text-goal">
-                <p className="font-semibold text-primary mb-2">The Goal:</p>
-                <p className="pl-6">
-                  To purchase a new, own-occupied commercial property to secure premises and build equity. The aim was to move from being a renter to an owner/landlord of his own business premises.
-                </p>
-              </div>
-              
-              <div data-testid="text-challenge">
-                <p className="font-semibold text-primary mb-2">The Challenge:</p>
-                <p className="pl-6">
-                  Limited cash deposit available due to critical working capital requirements within the existing business. The client needed a high Loan-to-Value Ratio (LVR), which is typically difficult to secure for commercial property purchases.
-                </p>
-              </div>
-            </div>
+      <section className="py-8 md:py-12 bg-background border-b border-border">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-6">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
+              Select a Case Study
+            </h2>
+            <p className="text-muted-foreground">
+              Choose a scenario to learn more about our commercial lending solutions
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={() => setActiveCase("highLVR")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "highLVR"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-highLVR"
+            >
+              90% LVR Commercial Property Finance
+            </Button>
+            <Button
+              onClick={() => setActiveCase("rapidRefinance")}
+              className={`text-base md:text-lg px-6 py-6 h-auto transition-all ${
+                activeCase === "rapidRefinance"
+                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                  : "bg-card text-primary border-2 border-primary hover:bg-primary/10"
+              }`}
+              data-testid="button-case-rapidRefinance"
+            >
+              Rapid Commercial Refinance With Minimal Documents
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${constructionImage})` }}
-        />
-        <div className="absolute inset-0 bg-background/90" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
-          <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
-            <div className="flex items-start gap-6 mb-6">
-              <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <Lightbulb className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-solution-title"
-                >
-                  Our Strategic Solution
+      {activeCase === "highLVR" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 1
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  90% LVR Commercial Property Finance
                 </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we helped a business owner purchase their own commercial property with minimal deposit while preserving vital cash flow
+                </p>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-1"
+                    >
+                      The Client's Goal & Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-client-status-1">
+                    <p className="font-semibold text-primary mb-2">Client Status:</p>
+                    <p className="pl-6">
+                      A business owner operating out of a rented factory, currently paying $129,000 per annum in rent.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-goal-1">
+                    <p className="font-semibold text-primary mb-2">The Goal:</p>
+                    <p className="pl-6">
+                      To purchase a new, own-occupied commercial property to secure premises and build equity. The aim was to move from being a renter to an owner/landlord of his own business premises.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-challenge-1">
+                    <p className="font-semibold text-primary mb-2">The Challenge:</p>
+                    <p className="pl-6">
+                      Limited cash deposit available due to critical working capital requirements within the existing business. The client needed a high Loan-to-Value Ratio (LVR), which is typically difficult to secure for commercial property purchases.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <div data-testid="text-market-review">
-                <p className="font-semibold text-primary mb-2">Market Review:</p>
-                <p className="pl-6">
-                  We conducted an extensive review of the commercial lending market to identify lenders with appetite for higher LVR commercial deals.
-                </p>
-              </div>
-              
-              <div data-testid="text-key-win">
-                <p className="font-semibold text-primary mb-2">The Key Win:</p>
-                <p className="pl-6">
-                  We were able to source a specialist commercial lender willing to approve a 90% Loan-to-Value Ratio (LVR) for the property purchase - a significant achievement in the commercial lending space.
-                </p>
-              </div>
-              
-              <div data-testid="text-rate-structure">
-                <p className="font-semibold text-primary mb-2">Rate Structure:</p>
-                <p className="pl-6">
-                  The interest rate was within the same range as standard commercial lending, with only a small, manageable premium paid for the higher LVR.
-                </p>
-              </div>
-              
-              <div data-testid="text-structure">
-                <p className="font-semibold text-primary mb-2">The Structure:</p>
-                <ul className="pl-6 space-y-3 mt-2">
-                  <li>
-                    <span className="font-semibold text-primary">Establishment of a New SPV:</span> A new Special Purpose Vehicle (Company) was set up specifically to purchase and hold the commercial property.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-primary">Leaseback Arrangement:</span> The client's existing business was then able to lease the property back from the new SPV and pay rent to its own company.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section className="py-16 md:py-24 bg-accent">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
-            <div className="flex items-start gap-6 mb-6">
-              <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
-                <TrendingUp className="h-8 w-8 text-primary" />
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-1"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-market-review-1">
+                    <p className="font-semibold text-primary mb-2">Market Review:</p>
+                    <p className="pl-6">
+                      We conducted an extensive review of the commercial lending market to identify lenders with appetite for higher LVR commercial deals.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-key-win-1">
+                    <p className="font-semibold text-primary mb-2">The Key Win:</p>
+                    <p className="pl-6">
+                      We were able to source a specialist commercial lender willing to approve a 90% Loan-to-Value Ratio (LVR) for the property purchase - a significant achievement in the commercial lending space.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-rate-structure-1">
+                    <p className="font-semibold text-primary mb-2">Rate Structure:</p>
+                    <p className="pl-6">
+                      The interest rate was within the same range as standard commercial lending, with only a small, manageable premium paid for the higher LVR.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-structure-1">
+                    <p className="font-semibold text-primary mb-2">The Structure:</p>
+                    <ul className="pl-6 space-y-3 mt-2">
+                      <li>
+                        <span className="font-semibold text-primary">Establishment of a New SPV:</span> A new Special Purpose Vehicle (Company) was set up specifically to purchase and hold the commercial property.
+                      </li>
+                      <li>
+                        <span className="font-semibold text-primary">Leaseback Arrangement:</span> The client's existing business was then able to lease the property back from the new SPV and pay rent to its own company.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h2 
-                  className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6"
-                  data-testid="text-outcome-title"
-                >
-                  The Positive Outcome
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-1"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="font-medium text-primary" data-testid="text-outcome-intro-1">
+                    A strategic win that delivered long-term stability and cash flow control:
+                  </p>
+                  
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-1-1">
+                      <span className="font-semibold text-primary">Property Acquisition:</span> The client successfully acquired an owner-occupied commercial property, transitioning from renting to ownership.
+                    </li>
+                    <li data-testid="text-outcome-1-2">
+                      <span className="font-semibold text-primary">Cash Flow Retention:</span> With the 90% LVR structure, the business retained essential cash flow to sustain daily operations and support growth.
+                    </li>
+                    <li data-testid="text-outcome-1-3">
+                      <span className="font-semibold text-primary">Future Foundation:</span> The client is now building equity in an asset, has stabilized his premises costs, and has a foundation for his next stage of growth.
+                    </li>
+                    <li data-testid="text-outcome-1-4">
+                      <span className="font-semibold text-primary">Ongoing Partnership:</span> We continue to support the client with forward-planning, ensuring their finance strategy evolves with the growth of their business.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {activeCase === "rapidRefinance" && (
+        <>
+          <section className="py-12 md:py-16 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="text-center mb-8">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  Case Study 2
+                </span>
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">
+                  Rapid Commercial Refinance With Minimal Documents
                 </h2>
+                <p className="text-muted-foreground text-lg italic max-w-3xl mx-auto">
+                  How we secured fast approval for a business whose financial situation had changed — after another lender said no
+                </p>
+              </div>
+              
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-goal-title-2"
+                    >
+                      The Client's Goal & Challenge
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p data-testid="text-intro-2">
+                    Refinancing commercial debt can be challenging when a business has experienced fluctuations in trading performance. Many lenders require full financial statements, BAS, and extensive supporting documents. But under the Rapid Refinance process, we were able to obtain approval quickly by providing only the minimum required documents — even after another broker told the client they didn't qualify.
+                  </p>
+
+                  <div data-testid="text-goal-2">
+                    <p className="font-semibold text-primary mb-3">The Client's Goal:</p>
+                    <p className="pl-6 mb-3">
+                      The client operated a well-established business but had experienced changes in their financial performance over the last 12 months. Their goal was simple:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Refinance their existing business loan</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Reduce their interest rate and monthly repayments</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Avoid providing extensive financial documents due to timing pressures</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6">
+                      They approached another broker first — who told them they <span className="italic">couldn't borrow the amount they needed</span> based on their most recent financials.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-challenge-2">
+                    <p className="font-semibold text-primary mb-3">The Challenge:</p>
+                    <p className="pl-6 mb-3">The business experienced:</p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A reduction in net profit</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Fluctuating turnover</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Higher expenses in the recent period</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mb-3">
+                      The previous broker assessed them under a full-documentation lending model and concluded that serviceability <span className="font-semibold text-primary">did not meet standard commercial criteria.</span>
+                    </p>
+                    <p className="pl-6 font-semibold text-primary">
+                      The client came to us concerned they had no options.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              <p className="font-medium text-primary" data-testid="text-outcome-intro">
-                A strategic win that delivered long-term stability and cash flow control:
-              </p>
-              
-              <ul className="space-y-4 pl-6">
-                <li data-testid="text-outcome-1">
-                  <span className="font-semibold text-primary">Property Acquisition:</span> The client successfully acquired an owner-occupied commercial property, transitioning from renting to ownership.
-                </li>
-                <li data-testid="text-outcome-2">
-                  <span className="font-semibold text-primary">Cash Flow Retention:</span> With the 90% LVR structure, the business retained essential cash flow to sustain daily operations and support growth.
-                </li>
-                <li data-testid="text-outcome-3">
-                  <span className="font-semibold text-primary">Future Foundation:</span> The client is now building equity in an asset, has stabilized his premises costs, and has a foundation for his next stage of growth.
-                </li>
-                <li data-testid="text-outcome-4">
-                  <span className="font-semibold text-primary">Ongoing Partnership:</span> We continue to support the client with forward-planning, ensuring their finance strategy evolves with the growth of their business.
-                </li>
-              </ul>
+          </section>
+
+          <section className="relative py-16 md:py-24 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${constructionImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/90" />
+            <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card/95 p-8 md:p-12 rounded-lg border border-border backdrop-blur-sm">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <Lightbulb className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-solution-title-2"
+                    >
+                      Our Strategic Solution
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-2-step-1">
+                    <p className="font-semibold text-primary mb-3">1. Switching to a Rapid Refinance Pathway</p>
+                    <p className="pl-6 mb-3">
+                      Rather than using traditional full-doc commercial lending, we assessed them under a <span className="font-semibold text-primary">Rapid Refinance</span> model — a lender program requiring only:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-3">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>12 months of business loan statements</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Security address, current value, and loan amount</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Basic business financial indicators: turnover, net profit, interest expense, depreciation</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6">
+                      This meant the business did <span className="font-semibold text-primary">not</span> need to supply BAS, full financial statements, or personal financials.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-2-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Presenting the Business on Its Strongest Merits</p>
+                    <p className="pl-6 mb-3">
+                      Although profitability had dropped, the business loan statements demonstrated:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-3">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>No missed repayments</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Stable repayment history</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Clear account conduct</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6">
+                      This became the core strength of the application.
+                    </p>
+                  </div>
+                  
+                  <div data-testid="text-solution-2-step-3">
+                    <p className="font-semibold text-primary mb-3">3. Positioning the Refinancing Case Correctly</p>
+                    <p className="pl-6 mb-3">
+                      We reframed the application using what mattered most under rapid refinance assessment:
+                    </p>
+                    <ul className="pl-12 space-y-2 mb-3">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Strong security position</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Stable trading income</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Acceptable cash flow trends</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Good repayment conduct</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6">
+                      This removed the need for a detailed year-on-year profit analysis.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-solution-2-step-4">
+                    <p className="font-semibold text-primary mb-3">4. Fast Approval Through a Streamlined Lender Process</p>
+                    <p className="pl-6 mb-3">
+                      With the two essential documents and minimal financial summary, the lender approved the refinance extremely quickly.
+                    </p>
+                    <p className="pl-6">
+                      The client received their formal approval and letter of offer shortly after.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-2"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <ul className="space-y-4 pl-6">
+                    <li data-testid="text-outcome-2-1">
+                      <span className="font-semibold text-primary">Full Refinance Approval:</span> After another broker said "it can't be done"
+                    </li>
+                    <li data-testid="text-outcome-2-2">
+                      <span className="font-semibold text-primary">No Need for Full Financials:</span> BAS, or personal documents
+                    </li>
+                    <li data-testid="text-outcome-2-3">
+                      <span className="font-semibold text-primary">Lower Repayments:</span> And improved cash flow
+                    </li>
+                    <li data-testid="text-outcome-2-4">
+                      <span className="font-semibold text-primary">Fast Turnaround:</span> Meeting the client's timing requirements
+                    </li>
+                    <li data-testid="text-outcome-2-5">
+                      <span className="font-semibold text-primary">Future Credit Relationship:</span> A lender relationship suitable for future credit needs
+                    </li>
+                    <li data-testid="text-outcome-2-6">
+                      <span className="font-semibold text-primary">Simple, Stress-Free Refinance:</span> Despite recent financial challenges
+                    </li>
+                  </ul>
+                  
+                  <p className="mt-6 text-primary font-medium" data-testid="text-outcome-summary-2">
+                    The client is now positioned with a more manageable facility and a lender that supports streamlined documentation for future borrowing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <section className="relative py-16 md:py-24 overflow-hidden">
         <div 
@@ -197,7 +505,7 @@ export default function CommercialScenario() {
               Five-Stage Process Map
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-              Our structured approach to high-LVR commercial property finance
+              Our structured approach to commercial property finance
             </p>
           </div>
 
@@ -212,7 +520,7 @@ export default function CommercialScenario() {
                     Initial Consultation & Needs Analysis
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Comprehensive assessment of the client's current situation including rental costs, business cash flow requirements, and property goals. Understanding the critical need to preserve working capital while achieving property ownership.
+                    Comprehensive assessment of the client's current situation including business cash flow requirements and property or refinance goals. Understanding the critical needs and timing constraints.
                   </p>
                 </div>
               </div>
@@ -231,7 +539,7 @@ export default function CommercialScenario() {
                     Market Research & Lender Identification
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Extensive review of the commercial lending market to identify specialist lenders with appetite for higher LVR deals. Analysis of rate structures, terms, and conditions to find the optimal solution that balances LVR requirements with competitive pricing.
+                    Extensive review of the commercial lending market to identify specialist lenders suited to your specific needs. Analysis of rate structures, terms, conditions, and documentation requirements.
                   </p>
                 </div>
               </div>
@@ -247,10 +555,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Structure Design & SPV Establishment
+                    Structure Design & Documentation
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Development of the optimal ownership structure including establishment of a Special Purpose Vehicle (SPV) company to hold the property. Coordination with accountants and legal advisors to ensure the structure supports both the finance requirements and future business goals.
+                    Development of the optimal structure and preparation of required documentation. Coordination with accountants and legal advisors to ensure the structure supports both the finance requirements and future business goals.
                   </p>
                 </div>
               </div>
@@ -269,7 +577,7 @@ export default function CommercialScenario() {
                     Application & Approval Management
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Preparation and submission of the finance application to the specialist lender. Management of the approval process including property valuations, business financials review, and satisfaction of all lender conditions for the 90% LVR facility.
+                    Preparation and submission of the finance application to the specialist lender. Management of the approval process including valuations, financials review, and satisfaction of all lender conditions.
                   </p>
                 </div>
               </div>
@@ -285,10 +593,10 @@ export default function CommercialScenario() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-2">
-                    Settlement & Leaseback Execution
+                    Settlement & Ongoing Support
                   </h3>
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Finalisation of settlement coordinating with solicitors, lenders, and all parties. Execution of the leaseback arrangement between the new SPV (as landlord) and the operating business (as tenant), ensuring ongoing compliance and establishing the foundation for future growth planning.
+                    Finalisation of settlement coordinating with solicitors, lenders, and all parties. Ongoing support and forward-planning to ensure your finance strategy evolves with the growth of your business.
                   </p>
                 </div>
               </div>
@@ -371,7 +679,7 @@ export default function CommercialScenario() {
                 >
                   <Button 
                     className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                    data-testid="button-book-meeting"
+                    data-testid="button-book-meeting-footer"
                   >
                     Book A Meeting
                   </Button>
