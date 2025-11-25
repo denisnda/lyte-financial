@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import { Target, Lightbulb, ArrowRight } from "lucide-react";
-import heroImage from "@assets/SME PURCH 1_1763876386191.jpg";
+import heroImage from "@assets/generated_images/Engineering_workshop_manufacturing_facility_c59a6e79.png";
 
 export default function BusinessScenario() {
   return (
@@ -14,7 +14,7 @@ export default function BusinessScenario() {
           data-testid="img-hero-background"
         />
         
-        <div className="absolute inset-0 bg-primary" />
+        <div className="absolute inset-0 bg-primary/70" />
         
         <div className="relative z-10 w-full px-6 md:px-12 text-center">
           <div className="max-w-4xl mx-auto">
