@@ -41,9 +41,23 @@ export default function Team() {
                   <h2 className="font-serif text-2xl font-bold text-primary mb-1">Tony Ly</h2>
                   <p className="text-primary/80 font-medium">Founder / Director</p>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   Tony founded Lyte Financial to deliver lending solutions beyond standard banking. His expertise spans business acquisitions, commercial property, residential lending, and SMSF structures. Tony's strategic approach and ability to structure complex, multi-layered finance solutions has helped countless clients achieve their ownership goals.
                 </p>
+                <div className="text-center">
+                  <a 
+                    href="https://calendly.com/tony-lytefinancial/30min?month=2025-11" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      className="w-full"
+                      data-testid="button-book-tony"
+                    >
+                      Book a meeting with Tony
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
 
