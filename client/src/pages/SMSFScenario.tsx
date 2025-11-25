@@ -61,7 +61,7 @@ export default function SMSFScenario() {
               }`}
               data-testid="button-case-partners"
             >
-              Business Partners & Unit Trust
+              SMSF Business Premises Purchase
             </Button>
             <Button
               onClick={() => setActiveCase("personal")}
@@ -87,7 +87,7 @@ export default function SMSFScenario() {
                   Case Study 1
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary">
-                  The Smart Structure for Business Partners & SMSF Property
+                  SMSF Business Premises Purchase
                 </h2>
               </div>
               
@@ -101,19 +101,93 @@ export default function SMSFScenario() {
                       className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
                       data-testid="text-goal-title-1"
                     >
-                      The Client's Goal
+                      The Client's Goal & Challenge
                     </h3>
                   </div>
                 </div>
                 
-                <div className="space-y-4 text-primary text-base md:text-lg leading-relaxed">
-                  <p data-testid="text-goal-description-1">
-                    Two business partners, who run a highly successful company, identified an ideal commercial property to purchase and operate their business from.
-                  </p>
-                  
-                  <p data-testid="text-goal-description-2">
-                    Their primary goal was not to use their personal or business cash flow for the purchase. Instead, they wanted to leverage their individual Self-Managed Super Funds (SMSFs) to acquire the asset. This presented a significant structural challenge: how can two separate SMSFs legally and effectively co-purchase a single property?
-                  </p>
+                <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div>
+                    <p className="mb-4" data-testid="text-goal-description-1">
+                      Two business partners identified a prime commercial property ideal for their business operations. Their goal was to:
+                    </p>
+                    <ul className="pl-6 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Purchase the property through their SMSFs — not personally</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Avoid using personal cash or business cash flow</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Secure long-term business stability by occupying a premises they indirectly own</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Generate rental income back into their super funds</span>
+                      </li>
+                    </ul>
+                    <p>
+                      However, each partner held their own SMSF, and SMSFs cannot simply "co-own" property directly unless structured correctly.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-primary mb-3">The Challenge:</p>
+                    <p className="pl-6 mb-3">Two separate SMSFs face strict rules around:</p>
+                    <ul className="pl-12 space-y-2 mb-4">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Joint property ownership</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Related-party leases</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Arm's-length transactions</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>SMSF borrowing structures (LRBAs)</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Asset segregation</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mb-3">
+                      <strong className="text-primary">The primary challenge:</strong> How can two separate SMSFs legally and efficiently co-purchase one commercial property that their business will lease?
+                    </p>
+                    <p className="pl-6 mb-3">
+                      A direct co-ownership structure was not compliant or lender-friendly. A structure needed to:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Allow equal ownership</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Enable SMSF borrowing</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Support a commercial lease to their own trading business</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Remain fully compliant with SIS legislation</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Be acceptable to lenders for LRBA lending</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,35 +215,116 @@ export default function SMSFScenario() {
                   </div>
                 </div>
                 
-                <div className="space-y-6 text-primary text-base md:text-lg leading-relaxed">
-                  <p data-testid="text-solution-intro-1">
-                    Our expertise was in guiding the clients on the right structure before the finance was even discussed. We collaborated closely with their accountant to develop a solution.
-                  </p>
+                <div className="space-y-8 text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <div data-testid="text-solution-1-step-1">
+                    <p className="font-semibold text-primary mb-3">1. Establishing a Unit Trust</p>
+                    <p className="pl-6">
+                      We worked with their accountant to establish a special-purpose Unit Trust designed solely to hold the commercial property. This trust became the legal purchasing entity, simplifying ownership and lending.
+                    </p>
+                  </div>
                   
-                  <p className="font-semibold text-primary" data-testid="text-solution-answer-1">
-                    The answer was a Unit Trust. This is how we implemented it:
-                  </p>
+                  <div data-testid="text-solution-1-step-2">
+                    <p className="font-semibold text-primary mb-3">2. Each SMSF Invests Into the Unit Trust</p>
+                    <p className="pl-6 mb-3">
+                      Each partner's SMSF purchased 50% of the units in the trust. This ensured:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Equal ownership</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Clear reporting</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A compliant investment</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>A structure lenders could work with</span>
+                      </li>
+                    </ul>
+                  </div>
                   
+                  <div data-testid="text-solution-1-step-3">
+                    <p className="font-semibold text-primary mb-3">3. The Unit Trust Purchases the Property</p>
+                    <p className="pl-6">
+                      With funds from both SMSFs and LRBA lending support, the Unit Trust acquired the commercial property. Title was held by the trust, not the individuals or their business.
+                    </p>
+                  </div>
+
+                  <div data-testid="text-solution-1-step-4">
+                    <p className="font-semibold text-primary mb-3">4. Commercial Leaseback to the Trading Business</p>
+                    <p className="pl-6 mb-3">
+                      Once settled, the client's trading business moved into the property as the tenant. We ensured the lease was structured:
+                    </p>
+                    <ul className="pl-12 space-y-2">
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>At market rent</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>On arm's-length terms</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>With SMSF compliance in mind</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary font-bold flex-shrink-0">•</span>
+                        <span>Suitable for audit and long-term planning</span>
+                      </li>
+                    </ul>
+                    <p className="pl-6 mt-3">
+                      This ensured the SMSFs received regular rental income while the business secured a stable premises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 md:py-24 bg-accent">
+            <div className="max-w-5xl mx-auto px-6 md:px-12">
+              <div className="bg-card p-8 md:p-12 rounded-lg border border-border">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-full flex-shrink-0">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 
+                      className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6"
+                      data-testid="text-outcome-title-1"
+                    >
+                      The Positive Outcome
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
                   <ul className="space-y-4 pl-6">
-                    <li className="flex gap-3" data-testid="text-solution-step-1-1">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span><strong className="text-primary">Establishment of a Unit Trust:</strong> A new Unit Trust was established specifically for the purpose of holding the asset.</span>
+                    <li data-testid="text-outcome-1-1">
+                      <span className="font-semibold text-primary">Two SMSFs Successfully Co-Purchased:</span> A commercial property using a compliant and lender-approved Unit Trust structure.
                     </li>
-                    
-                    <li className="flex gap-3" data-testid="text-solution-step-1-2">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span><strong className="text-primary">SMSF Investment:</strong> The two business partners' individual SMSFs each invested in the trust, acquiring an equal share of the units.</span>
+                    <li data-testid="text-outcome-1-2">
+                      <span className="font-semibold text-primary">No Personal Contributions Required:</span> No personal contributions or business cash were required to fund the property.
                     </li>
-                    
-                    <li className="flex gap-3" data-testid="text-solution-step-1-3">
-                      <span className="text-primary font-bold flex-shrink-0">•</span>
-                      <span><strong className="text-primary">The Purchase:</strong> This Unit Trust (now funded by the two SMSFs) became the legal purchasing entity that acquired the new commercial property.</span>
+                    <li data-testid="text-outcome-1-3">
+                      <span className="font-semibold text-primary">Business Secured Long-Term Premises:</span> Business secured a high-quality premises with long-term stability.
+                    </li>
+                    <li data-testid="text-outcome-1-4">
+                      <span className="font-semibold text-primary">Rental Income to SMSFs:</span> Market-rate rent now flows into both SMSFs, improving retirement wealth.
+                    </li>
+                    <li data-testid="text-outcome-1-5">
+                      <span className="font-semibold text-primary">Scalable, Future-Proof Structure:</span> A scalable, future-proof structure for future SMSF investments.
+                    </li>
+                    <li data-testid="text-outcome-1-6">
+                      <span className="font-semibold text-primary">Full Compliance:</span> Full compliance with SIS Act, ATO audit requirements, and LRBA lending rules.
                     </li>
                   </ul>
-                  
-                  <p className="pt-4" data-testid="text-solution-conclusion-1">
-                    With this compliant and clear structure in place, we were able to facilitate the lending required for the Unit Trust to complete the transaction.
-                  </p>
                 </div>
               </div>
             </div>
