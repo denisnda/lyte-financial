@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import { Target, Lightbulb, TrendingUp, MapPin, Phone, Mail, Clock, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/stock_images/professional_mature__b1f6bc10.jpg";
+import heroImage from "@assets/stock_images/luxury_apartment_bui_0ffde56c.jpg";
 import constructionImage from '@assets/stock_images/construction_site_wo_d72f9b16.jpg';
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 
