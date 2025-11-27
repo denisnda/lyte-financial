@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import { Card } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { FileText, ListChecks, Home } from "lucide-react";
-import smsfBanner from "@assets/stock_images/retirement_planning__a2c10d4c.jpg";
+import smsfBanner from "@assets/stock_images/senior_couple_happy__aafee946.jpg";
 
 export default function SMSFLending() {
   const [, setLocation] = useLocation();
