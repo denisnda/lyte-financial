@@ -285,7 +285,7 @@ export default function Home() {
 
       <section className="w-full" data-testid="section-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.7!2d151.2039!3d-33.8751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3f3b312871%3A0x5017d681632cfc0!2s368%20Sussex%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
+          src="https://maps.google.com/maps?q=526/368+Sussex+St,+Sydney+NSW+2000,+Australia&t=&z=17&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="450"
           style={{ border: 0 }}
