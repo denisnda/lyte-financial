@@ -124,7 +124,7 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <Button 
-                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
+                  className="bg-accent text-primary hover:bg-accent/90 font-semibold px-8"
                   size="lg"
                   data-testid="button-book-meeting-hero"
                 >
