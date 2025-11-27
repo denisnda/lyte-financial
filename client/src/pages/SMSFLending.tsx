@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import { Card } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { FileText, ListChecks, Home } from "lucide-react";
-import smsfBanner from "@assets/stock_images/senior_couple_happy__aafee946.jpg";
+import newSmsfBanner from "@assets/stock_images/senior_couple_happy__aafee946.jpg";
 
 export default function SMSFLending() {
   const [, setLocation] = useLocation();
@@ -13,7 +13,7 @@ export default function SMSFLending() {
       
       <section 
         className="relative py-24 md:py-32 bg-cover bg-center"
-        style={{ backgroundImage: `url(${smsfBanner})` }}
+        style={{ backgroundImage: `url(${newSmsfBanner})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
