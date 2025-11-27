@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { Building2, Users, TrendingUp, Home as HomeIcon, Star, MapPin, Phone, Mail, Clock } from "lucide-react";
-import heroImage from "@assets/image_1763875547582.png";
+import heroImage from "@assets/stock_images/professional_busines_29601c72.jpg";
 import mapImage from "@assets/image_1763878897395.png";
 import logoImage from "@assets/amended final logo_1763958071951.jpg";
 import useEmblaCarousel from 'embla-carousel-react';
