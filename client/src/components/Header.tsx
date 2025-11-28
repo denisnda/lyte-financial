@@ -127,6 +127,17 @@ export default function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <a
+                            href="/calculators/interest-only"
+                            className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            data-testid="link-interest-only-calculator"
+                          >
+                            <div className="text-base font-semibold leading-none">Interest Only Repayment Calculator</div>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
                             href="/calculators/offset"
                             className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             data-testid="link-offset-calculator"
@@ -154,17 +165,6 @@ export default function Header() {
                             data-testid="link-stamp-duty-calculator"
                           >
                             <div className="text-base font-semibold leading-none">Stamp Duty Calculator</div>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <a
-                            href="/calculators/interest-only"
-                            className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            data-testid="link-interest-only-calculator"
-                          >
-                            <div className="text-base font-semibold leading-none">Interest Only Repayment Calculator</div>
                           </a>
                         </NavigationMenuLink>
                       </li>
