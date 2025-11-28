@@ -31,7 +31,7 @@ export default function StampDutyCalculator() {
             src="https://www.visionabacus.net/Tools/B3/SuiteA/Z200/MFAA/Stamp_Duty_Calculator/BlueGrey" 
             frameBorder="0" 
             scrolling="no"
-            style={{ width: '100%', minHeight: '1400px' }}
+            style={{ width: '100%', minHeight: '900px' }}
             title="Stamp Duty Calculator"
             data-testid="iframe-stamp-duty-calculator"
           />

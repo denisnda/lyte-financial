@@ -31,7 +31,7 @@ export default function BorrowingPowerCalculator() {
             src="https://www.visionabacus.net/Tools/B3/SuiteA/Z200/MFAA/Borrowing_Power_Calculator/BlueGrey" 
             frameBorder="0" 
             scrolling="no"
-            style={{ width: '100%', minHeight: '1400px' }}
+            style={{ width: '100%', minHeight: '900px' }}
             title="Borrowing Power Calculator"
             data-testid="iframe-borrowing-power-calculator"
           />

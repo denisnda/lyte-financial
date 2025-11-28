@@ -31,7 +31,7 @@ export default function OffsetCalculator() {
             src="https://www.visionabacus.net/Tools/B3/SuiteA/Z200/MFAA/Home_Loan_Offset_Calculator/BlueGrey" 
             frameBorder="0" 
             scrolling="no"
-            style={{ width: '100%', minHeight: '1400px' }}
+            style={{ width: '100%', minHeight: '900px' }}
             title="Home Loan Offset Calculator"
             data-testid="iframe-offset-calculator"
           />
