@@ -182,7 +182,7 @@ export default function Header() {
                             className="block select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             data-testid="link-book-tony"
                           >
-                            <div className="text-base font-semibold leading-none">Book a meeting with Tony</div>
+                            <div className="text-base font-semibold leading-none">Book a Meeting with Tony</div>
                           </a>
                         </NavigationMenuLink>
                       </li>
