@@ -24,9 +24,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (process.env.RESEND_API_KEY) {
         try {
           await resend.emails.send({
-            from: "Lyte Financial <noreply@website.lytefinancial.com.au>",
+            // from: "Lyte Financial <noreply@website.lytefinancial.com.au>",
             // to: "tony@lytefinancial.com.au",
-            to: "ihorlebediuk1994@gmail.com",
+            from: "Acme <onboarding@resend.dev>",
+            to: "softcoder210@gmail.com",
             subject: `New Contact Inquiry from ${inquiry.name}`,
             html: `
               <h2>New Contact Form Submission</h2>
